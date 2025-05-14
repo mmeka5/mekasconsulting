@@ -153,23 +153,33 @@ footer {
 }
 
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
+  .mobile-menu-button {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+
+  nav.mobile-hidden {
+    display: none;
   }
 
   nav {
-    display: flex;
     flex-direction: column;
     width: 100%;
     margin-top: 1rem;
   }
 
   nav a {
-    margin: 0.5rem 0;
+    display: block;
     padding: 0.5rem 1rem;
     width: 100%;
     text-align: left;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -199,7 +209,10 @@ footer {
 <body>
 <header>
 <div><img alt="Mekas Consulting Logo" src="img.png" style="height: 75px;"/></div>
-<nav>
+
+<div class="mobile-menu-button" onclick="toggleMenu()">&#9776;</div>
+<nav class="mobile-hidden">
+
 <a href="#services">Services</a>
 <a href="#scenarios">Client Scenarios</a>
 <a href="#about">About Me</a>
@@ -303,6 +316,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+</script>
+
+
+<script>
+function toggleMenu() {
+  var nav = document.querySelector('nav');
+  nav.classList.toggle('mobile-hidden');
+}
 </script>
 
 </body>
