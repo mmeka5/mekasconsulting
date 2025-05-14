@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link href="favicon-m1.png" rel="icon" type="image/png"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mekas Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      margin: 0;
+      font-family: 'Libre Baskerville', serif;
+      color: #1a2a6c;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+    header {
+      background: white;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #1a2a6c;
+      font-weight: bold;
+    }
+    section {
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .intro-text {
+      flex: 1 1 60%;
+    }
+    .intro-text h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .intro-text ul {
+      padding-left: 1rem;
+    }
+    .intro-photo {
+      flex: 1 1 35%;
+      text-align: center;
+    }
+    .intro-photo img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+    .services li {
+      background: #fff;
+      padding: 1rem;
+      border-left: 4px solid #1a2a6c;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .services li:hover {
+      background-color: #f0f0f0;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+    .services li .description {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .services li:hover .description {
+      display: block;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .intro-photo, .intro-text {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      .intro-photo img {
+        max-width: 250px;
+      }
+    }
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 1rem;
+  }
+}
+
+a img[alt="LinkedIn"]:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  }
+}
+  
+section {
+  padding: 4rem 2rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+body {
+  background: #eef2f7;
+}
+h2 {
+  border-left: 6px solid #1a2a6c;
+  padding-left: 1rem;
+  font-size: 1.75rem;
+}
+.intro-section {
+  background: linear-gradient(to right, #f1f4f9, #ffffff);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+footer {
+  background-color: #1a2a6c;
+  color: #ffffff;
+  padding: 2.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const headerOffset = document.querySelector('header').offsetHeight;
+      const scrollLinks = document.querySelectorAll('nav a');
+
+      scrollLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const target = document.getElementById(targetId);
+          if (target) {
+            const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: "smooth"
+            });
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+<header>
+<div><img alt="Mekas Consulting Logo" src="img.png" style="height: 70px;"/></div>
+<nav>
+<a href="#services">Services</a>
+<a href="#scenarios">Client Scenarios</a>
+<a href="#about">About Me</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+<!-- Main Intro Section with Photo -->
+<section class="main-content intro-section">
+<div class="intro-photo">
+<img alt="Consultant Photo" src="headshot.jpg" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+<p style="margin-top: 0.5rem; font-weight: bold; font-size: 2rem; color: #1a2a6c;">Michael Mekas</p></div>
+<div class="intro-text"><h1 style="font-size: 2rem; font-weight: 700; color: #1a2a6c; border-bottom: 2px solid #d4dce7; padding-bottom: 0.5rem; margin-bottom: 1rem;">IT Controls and Compliance Specialist</h1><p style="margin-bottom: 1rem;">I help companies build and strengthen their IT control environments — whether you're preparing for SOX, maturing existing controls, or responding to audit findings. I focus on practical solutions that work for both business and audit teams.</p><ul><li>IT control design and implementation</li><li>SOX readiness and remediation support</li><li>Segregation of duties (SoD) assessments</li><li>IT narratives and policy documentation</li><li>Ongoing advisory and support</li></ul></div>
+</section>
+<!-- Services Section (now below main content) -->
+<section class="services" id="services">
+<h2>Services</h2>
+<ul>
+<li><strong>IT Control Design and Implementation</strong><br/>
+<div class="description">Whether you're building from scratch or refining existing controls, I design solutions that work — not just on paper, but in practice. I draw on my audit and business background to help IT, audit, and business teams stay aligned on what matters most.</div>
+</li>
+<li><strong>SOX Readiness and Remediation Support</strong><br/>
+<div class="description">Whether you're preparing for an IPO or addressing control gaps after an audit, I help build or strengthen your SOX program so it's clear, defensible, and right-sized for your organization.</div>
+</li>
+<li><strong>Segregation of Duties ("SoD") Assessments</strong><br/>
+<div class="description">Segregation of Duties (SoD) is critical for maintaining internal control integrity. I conduct thorough assessments of your SoD framework to identify any conflicts or vulnerabilities, providing actionable recommendations for remediation.</div>
+</li>
+<li><strong>IT Narratives and Policy Documents</strong><br/>
+<div class="description">I help create detailed IT narratives and policy documents that outline the design, purpose, and operation of your controls — making them easier for internal teams and auditors to understand and review.</div>
+</li>
+<li><strong>IT Risk and Control Advisory with Flexible, Ongoing Support</strong><br/>
+<div class="description">I offer flexible support for teams that want an experienced advisor on call. Whether you're rolling out a new system, addressing access concerns, or refining control governance, I’m here to help.</div>
+</li>
+</ul>
+</section>
+<section id="scenarios">
+<h2>Client Scenarios</h2>
+<p>Not sure if you need IT controls support? Here are a few common situations where clients bring me in:</p>
+<ul>
+<li><strong>SOX Readiness:</strong> You’re under pressure to establish a SOX-compliant control environment, but aren’t sure where to start or how to prioritize.</li>
+<li><strong>Post-audit remediation:</strong> You've just been through an external audit and need help addressing IT control deficiencies or gaps.</li>
+<li><strong>Building from scratch:</strong> Your company is growing fast, and you need to implement IT controls and governance to stay ahead of future requirements.</li>
+<li><strong>Maturing existing controls:</strong> Your current controls are too manual, too broad, or inconsistently applied — and you'd like a more sustainable approach.</li>
+<li><strong>Ongoing advisory:</strong> You need a trusted advisor to support internal teams with risk assessments, role design, or periodic reviews as your environment evolves.</li>
+</ul>
+</section>
+<div style="max-width: 800px; margin: 0 auto 2rem auto; padding: 1rem 0;"><blockquote style="font-style: italic; color: #555; border-left: 3px solid #d4dce7; padding-left: 1rem; margin: 0;">“When controls are designed effectively from the beginning, everything downstream — from operations to audits and testing — becomes far more efficient and manageable.”</blockquote></div>
+<!-- About Me Section (now below services) -->
+<!-- About Me Section (now with photo included) -->
+<section id="about" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; padding: 4rem 1rem; max-width: 1200px; margin: auto;">
+<div style="flex: 2 1 60%; min-width: 300px;">
+<h2>About Me</h2>
+<p>I’m an independent IT compliance consultant with over a decade of experience spanning internal audit, external audit, and business operations. That experience includes 7 years at Deloitte and has since continued in a consulting role, advising companies of all sizes across a range of industries. My specialty is helping companies stand up or strengthen their IT control environments — with practical solutions that support both business and audit needs.</p>
+<p>
+      Whether you're just building out your IT control program, addressing control gaps, or maturing your compliance program, I offer support that fits the way your business works today — and scales with you as you grow.
+    </p>
+<p>
+      Outside of work, I enjoy spending time with my family, playing tennis, coaching baseball, and generally chasing after our three young kids.
+    </p>
+<div style="border: 1px solid #1a2a6c; padding: 1rem; border-radius: 8px; background: #f0f0f0; margin-top: 1.5rem;"><strong>Credentials &amp; Background:</strong><br/>• Certified Information Systems Auditor (CISA)<br/>• M.S. in Information Systems, Georgia State University<br/>• 10+ years of experience in IT controls and compliance</div></div>
+<div style="flex: 1 1 30%; min-width: 250px; text-align: center;">
+<img alt="About Me Pic" src="fam.jpg" style="width: 100%; max-width: 400px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+</div>
+</section>
+<!-- Contact & Footer -->
+<section id="contact" style="border-top: 1px solid #d4dce7; padding-top: 2rem;">
+<h2>Contact</h2>
+<p>Feel free to reach out — whether you're exploring options, have a few questions, or just want to bounce around some ideas.
+  I'm here to help however I can.</p>
+<p>Email: <a href="mailto:michael@mekasconsulting.com">michael@mekasconsulting.com</a></p>
+<p>Phone: <a href="tel:+4043358592">(404) 335-8592</a></p>
+<div style="margin-top: 1rem;">
+<a href="https://www.linkedin.com/in/michael-mekas/" style="display: inline-block;" target="_blank">
+<img alt="LinkedIn" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" style="width: 32px; height: 32px;" title="Connect with me on LinkedIn"/>
+</a>
+</div>
+</section>
+<footer>
+<p>© 2025 Mekas Consulting, LLC. All rights reserved.</p>
+</footer>
+</body>
+</html>
