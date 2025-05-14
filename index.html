@@ -241,16 +241,16 @@ footer {
 
 
 @media (max-width: 768px) {
-  .services li .description ul {
-    padding-left: 0;
-    margin-left: 0;
+  .services li:first-of-type .description ul {
+    list-style-position: outside;
+    padding-left: 1.5rem;
   }
 
-  .services li .description ul li {
-    list-style-position: inside;
-    padding-left: 0;
-    text-indent: 0;
-    margin-left: 0;
+  .services li:first-of-type .description ul li {
+    text-indent: -1rem;
+    padding-left: 1rem;
+    margin-bottom: 0.75rem;
+    display: block;
   }
 }
 
