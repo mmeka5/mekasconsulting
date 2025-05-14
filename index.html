@@ -7,7 +7,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Mekas Consulting</title>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet"/>
 <style>
 :root {
     scroll-padding-top: 80px;
@@ -216,15 +216,51 @@ footer {
 }
 
 
+  h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.85rem;
+    border-left: 6px solid #1a2a6c;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+
 @media (max-width: 768px) {
-  .services li .description ul {
-    list-style-position: inside;
+  .services li .description {
+    white-space: normal;
+  }
+
+  .services li .description br {
+    display: none;
+  }
+
+  .services li:first-of-type .description {
     padding-left: 1rem;
   }
 
-  .services li .description ul li {
-    text-indent: 0;
-    margin-left: 0;
+  .services li:first-of-type .description::before {
+    content: none;
+  }
+
+  .services li:first-of-type .description p {
+    margin: 0 0 0.75rem 0;
+    text-indent: -1.5rem;
+    padding-left: 1.5rem;
   }
 }
 
@@ -283,10 +319,10 @@ footer {
  <li><strong>Ongoing IT SOX Advisory</strong><br/>
       <div class="description">
       Dedicated weekly support for companies that need senior IT SOX guidance without hiring a full-time resource; this typically includes support such as:<br/><br/>
-        &emsp;&emsp;&bull; Advising on control design, documentation, and risk assessment<br/>
-        &emsp;&emsp;&bull; Leading walkthroughs, audit prep, and remediations<br/>
-        &emsp;&emsp;&bull; Helping teams think through practical ways to meet SOX expectations<br/>
-        &emsp;&emsp;&bull; Being available for check-ins, time-sensitive issues, and internal planning discussions as they arise
+        <p>• Advising on control design, documentation, and risk assessment</p>
+<p>• Leading walkthroughs, audit prep, and remediations</p>
+<p>• Helping teams think through practical ways to meet SOX expectations</p>
+<p>• Being available for check-ins, time-sensitive issues, and internal planning discussions as they arise</p>
 
 </div>
     </li>
