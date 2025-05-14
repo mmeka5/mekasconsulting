@@ -320,8 +320,19 @@ footer {
 <p>© 2025 Mekas Consulting, LLC. All rights reserved.</p>
 </footer>
 
-<script>
 function toggleMenu() {
+  const nav = document.querySelector('.mobile-nav');
+  nav.classList.toggle('mobile-hidden');
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll('.mobile-nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      document.querySelector('.mobile-nav').classList.add('mobile-hidden');
+    });
+  });
+});
   const nav = document.querySelector('.mobile-nav');
   if (nav.classList.contains('mobile-hidden')) {
     nav.classList.remove('mobile-hidden');
