@@ -156,30 +156,46 @@ footer {
   .mobile-menu-button {
     font-size: 2rem;
     cursor: pointer;
-    margin-top: 1rem;
-    margin-left: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
   }
 
-  nav.mobile-hidden {
+  .mobile-nav.mobile-hidden {
     display: none;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding-top: 1rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-nav a {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: bold;
+    color: #1a2a6c;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   nav {
     flex-direction: column;
     width: 100%;
-    margin-top: 1rem;
-  }
-
-  nav a {
-    display: block;
-    padding: 0.5rem 1rem;
-    width: 100%;
-    text-align: left;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
 
@@ -207,11 +223,11 @@ footer {
   </script>
 </head>
 <body>
-<header>
+<header style="position: relative;">
 <div><img alt="Mekas Consulting Logo" src="img.png" style="height: 75px;"/></div>
 
 <div class="mobile-menu-button" onclick="toggleMenu()">&#9776;</div>
-<nav class="mobile-hidden">
+<nav class="mobile-nav mobile-hidden">
 
 <a href="#services">Services</a>
 <a href="#scenarios">Client Scenarios</a>
@@ -304,24 +320,8 @@ footer {
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const serviceItems = document.querySelectorAll(".services li");
-
-  serviceItems.forEach(item => {
-    item.addEventListener("click", function() {
-      const desc = this.querySelector(".description");
-      if (desc) {
-        desc.style.display = (desc.style.display === "block") ? "none" : "block";
-      }
-    });
-  });
-});
-</script>
-
-
-<script>
 function toggleMenu() {
-  var nav = document.querySelector('nav');
+  var nav = document.querySelector('.mobile-nav');
   nav.classList.toggle('mobile-hidden');
 }
 </script>
