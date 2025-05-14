@@ -7,7 +7,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Mekas Consulting</title>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Roboto+Slab:wght@400;600&amp;display=swap" rel="stylesheet"/>
 <style>
 :root {
     scroll-padding-top: 80px;
@@ -264,6 +264,40 @@ footer {
   }
 }
 
+
+@media (max-width: 768px) {
+  .services li:first-of-type .description p {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+
+.services li:first-of-type .description p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 0.75rem 0;
+  text-indent: -1.5rem;
+  padding-left: 1.5rem;
+}
+
+
+.services li .description p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.services li .description p,
+.services li .description {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -290,10 +324,8 @@ footer {
 <body>
 <header style="position: relative;">
 <div><img alt="Mekas Consulting Logo" src="img.png" style="height: 75px;"/></div>
-
-<div class="mobile-menu-button" onclick="toggleMenu()">&#9776;</div>
+<div class="mobile-menu-button" onclick="toggleMenu()">☰</div>
 <nav class="mobile-nav mobile-hidden">
-
 <a href="#services">Services</a>
 <a href="#scenarios">Client Scenarios</a>
 <a href="#about">About Me</a>
@@ -303,29 +335,28 @@ footer {
 <!-- Main Intro Section with Photo -->
 <section class="main-content intro-section">
 <div class="intro-photo">
-    <img alt="Consultant Photo" src="headshot.jpg" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-    <p style="margin-top: 0.5rem; font-weight: bold; font-size: 2rem; color: #1a2a6c;">Michael Mekas</p>
-  </div>
-  <div class="intro-text">
-    <h1 style="font-size: 2rem; font-weight: 700; color: #1a2a6c;">An Experienced IT SOX Advisor on Your Side</h1>
-    <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1rem;">Ongoing support, practical guidance, and senior-level expertise—without the full-time hire.</p>
-    <p>I help companies design, strengthen, and manage their IT control environments with targeted, long-term support. Whether you're preparing for SOX compliance, managing external audit pressure, or just need to get your controls in order, I provide dedicated guidance you can rely on.</p>
-  </div>
-</section></section>
+<img alt="Consultant Photo" src="headshot.jpg" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+<p style="margin-top: 0.5rem; font-weight: bold; font-size: 2rem; color: #1a2a6c;">Michael Mekas</p>
+</div>
+<div class="intro-text">
+<h1 style="font-size: 2rem; font-weight: 700; color: #1a2a6c;">An Experienced IT SOX Advisor on Your Side</h1>
+<p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1rem;">Ongoing support, practical guidance, and senior-level expertise—without the full-time hire.</p>
+<p>I help companies design, strengthen, and manage their IT control environments with targeted, long-term support. Whether you're preparing for SOX compliance, managing external audit pressure, or just need to get your controls in order, I provide dedicated guidance you can rely on.</p>
+</div>
+</section>
 <!-- Services Section (now below main content) -->
 <section class="services" id="services">
 <h2>Services</h2>
 <ul>
- <li><strong>Ongoing IT SOX Advisory</strong><br/>
-      <div class="description">
+<li><strong>Ongoing IT SOX Advisory</strong><br/>
+<div class="description">
       Dedicated weekly support for companies that need senior IT SOX guidance without hiring a full-time resource; this typically includes support such as:<br/><br/>
-        <p>• Advising on control design, documentation, and risk assessment</p>
+<p>• Advising on control design, documentation, and risk assessment</p>
 <p>• Leading walkthroughs, audit prep, and remediations</p>
 <p>• Helping teams think through practical ways to meet SOX expectations</p>
 <p>• Being available for check-ins, time-sensitive issues, and internal planning discussions as they arise</p>
-
 </div>
-    </li>
+</li>
 <li><strong>IT Control Design and Implementation</strong><br/>
 <div class="description">Whether you're building from scratch or refining existing controls, I bring the experience to cut through the noise and focus on what matters — designing effective, reasonable control solutions. This can also include working with control owners to support the execution of those controls.</div>
 </li>
@@ -340,15 +371,15 @@ footer {
 <section id="scenarios">
 <h2>Client Scenarios</h2>
 <p>Companies often bring me in when they’re facing one of the following situations — and need consistent, senior-level support to get things right and keep them moving.</p>
- <ul>
-  <li>Preparing for SOX for the first time, often under tight deadlines</li>
-  <li>Navigating control gaps after an audit</li>
-  <li>Rolling out a new system without formal IT controls in place</li>
-  <li>Looking for a steady resource to support IT risk, access design, and control documentation</li>
+<ul>
+<li>Preparing for SOX for the first time, often under tight deadlines</li>
+<li>Navigating control gaps after an audit</li>
+<li>Rolling out a new system without formal IT controls in place</li>
+<li>Looking for a steady resource to support IT risk, access design, and control documentation</li>
 </ul>
 <p>In these situations, I typically support clients at around 15 hours per week — enough to drive progress without the need for a full-time hire. That said, I’m flexible with timing and involvement depending on your needs.</p>
-  </ul>
-</section></section>
+
+</section>
 <div style="max-width: 800px; margin: 0 auto 2rem auto; padding: 1rem 0;"><blockquote style="font-style: italic; color: #555; border-left: 3px solid #d4dce7; padding-left: 1rem; margin: 0;">“When controls are designed effectively from the beginning, everything downstream — from operations to audits and testing — becomes far more efficient and manageable.”</blockquote></div>
 <!-- About Me Section (now below services) -->
 <!-- About Me Section (now with photo included) -->
@@ -383,7 +414,6 @@ footer {
 <footer>
 <p>© 2025 Mekas Consulting, LLC. All rights reserved.</p>
 </footer>
-
 <script>
 function toggleMenu() {
   const nav = document.querySelector('.mobile-nav');
@@ -394,8 +424,6 @@ function toggleMenu() {
   }
 }
 </script>
-
-
 <script>
 function toggleMenu() {
   const nav = document.querySelector('.mobile-nav');
@@ -411,8 +439,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const serviceItems = document.querySelectorAll(".services li");
@@ -427,6 +453,5 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-
 </body>
 </html>
