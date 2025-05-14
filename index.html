@@ -7,7 +7,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Mekas Consulting</title>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;display=swap" rel="stylesheet"/>
 <style>
 :root {
     scroll-padding-top: 80px;
@@ -216,41 +216,15 @@ footer {
 }
 
 
-  h1, h2, h3 {
-    font-family: 'Roboto Slab', serif;
-    font-weight: 600;
-  }
-
-  h1 {
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
-  }
-
-  h2 {
-    font-size: 1.85rem;
-    border-left: 6px solid #1a2a6c;
-    padding-left: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 1.05rem;
-    line-height: 1.7;
-  }
-
-
 @media (max-width: 768px) {
-  .services li:first-of-type .description ul {
-    list-style-position: outside;
-    padding-left: 1.5rem;
+  .services li .description ul {
+    list-style-position: inside;
+    padding-left: 1rem;
   }
 
-  .services li:first-of-type .description ul li {
-    text-indent: -1rem;
-    padding-left: 1rem;
-    margin-bottom: 0.75rem;
-    display: block;
+  .services li .description ul li {
+    text-indent: 0;
+    margin-left: 0;
   }
 }
 
@@ -397,22 +371,6 @@ document.addEventListener("DOMContentLoaded", function () {
   navLinks.forEach(link => {
     link.addEventListener('click', function () {
       document.querySelector('.mobile-nav').classList.add('mobile-hidden');
-    });
-  });
-});
-</script>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const serviceItems = document.querySelectorAll(".services li");
-
-  serviceItems.forEach(item => {
-    item.addEventListener("click", function() {
-      const desc = this.querySelector(".description");
-      if (desc) {
-        desc.style.display = (desc.style.display === "block") ? "none" : "block";
-      }
     });
   });
 });
