@@ -267,5 +267,21 @@ footer {
 <footer>
 <p>© 2025 Mekas Consulting, LLC. All rights reserved.</p>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const serviceItems = document.querySelectorAll(".services li");
+
+  serviceItems.forEach(item => {
+    item.addEventListener("click", function() {
+      const desc = this.querySelector(".description");
+      if (desc) {
+        desc.style.display = (desc.style.display === "block") ? "none" : "block";
+      }
+    });
+  });
+});
+</script>
+
 </body>
 </html>
