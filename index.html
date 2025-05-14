@@ -338,6 +338,39 @@ footer {
   margin-bottom: 0.75rem !important;
 }
 
+
+/* Default style - solid border left (currently in use) */
+.services li {
+  background: #f5f5f5;
+  border-left: 6px solid #1a2a6c;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+/* Option 1: No border, blue bar top */
+.services li.alt1 {
+  border-left: none;
+  border-top: 4px solid #1a2a6c;
+}
+
+/* Option 2: Soft shadow with rounded corners */
+.services li.alt2 {
+  border-left: none;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+/* Option 3: Full border, subtle inner shadow */
+.services li.alt3 {
+  border: 1px solid #d0d0d0;
+  background: #f9f9f9;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -388,22 +421,22 @@ footer {
 <section class="services" id="services">
 <h2>Services</h2>
 <ul>
-<li><strong>Ongoing IT SOX Advisory</strong><br/>
+<li class="alt2"><strong>Ongoing IT SOX Advisory</strong><br/>
 <div class="description">
-      Dedicated weekly support for companies that need senior IT SOX guidance without hiring a full-time resource; this typically includes support such as:<p></p>
+      Dedicated weekly support for companies that need senior IT SOX guidance without hiring a full-time resource; this typically includes support such as:<br/><br/>
 <p>• Advising on control design, documentation, and risk assessment</p>
 <p>• Leading walkthroughs, audit prep, and remediations</p>
 <p>• Helping teams think through practical ways to meet SOX expectations</p>
 <p>• Being available for check-ins, time-sensitive issues, and internal planning discussions as they arise</p>
 </div>
 </li>
-<li><strong>IT Control Design and Implementation</strong><br/>
+<li class="alt2"><strong>IT Control Design and Implementation</strong><br/>
 <div class="description">Whether you're building from scratch or refining existing controls, I bring the experience to cut through the noise and focus on what matters — designing effective, reasonable control solutions. This can also include working with control owners to support the execution of those controls.</div>
 </li>
-<li><strong>SOX Readiness and Remediation Support</strong><br/>
+<li class="alt2"><strong>SOX Readiness and Remediation Support</strong><br/>
 <div class="description">I help companies prepare for SOX or remediate control gaps after an audit — designing sustainable, risk-based controls that meet requirements without unnecessary complexity. My approach is grounded in experience and tailored to what makes sense for your business.</div>
 </li>
-<li><strong>IT Narratives and Policy Documents</strong><br/>
+<li class="alt2"><strong>IT Narratives and Policy Documents</strong><br/>
 <div class="description">I help your team create control documentation that clearly defines the purpose and operation of your controls — streamlining internal understanding and audit readiness.</div>
 </li>
 </ul>
@@ -412,10 +445,10 @@ footer {
 <h2>Client Scenarios</h2>
 <p>Companies often bring me in when they’re facing one of the following situations — and need consistent, senior-level support to get things right and keep them moving.</p>
 <ul>
-<li>Preparing for SOX for the first time, often under tight deadlines</li>
-<li>Navigating control gaps after an audit</li>
-<li>Rolling out a new system without formal IT controls in place</li>
-<li>Looking for a steady resource to support IT risk, access design, and control documentation</li>
+<li class="alt2">Preparing for SOX for the first time, often under tight deadlines</li>
+<li class="alt2">Navigating control gaps after an audit</li>
+<li class="alt2">Rolling out a new system without formal IT controls in place</li>
+<li class="alt2">Looking for a steady resource to support IT risk, access design, and control documentation</li>
 </ul>
 <p>In these situations, I typically support clients at around 15 hours per week — enough to drive progress without the need for a full-time hire. That said, I’m flexible with timing and involvement depending on your needs.</p>
 
