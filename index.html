@@ -9,12 +9,28 @@
 <title>Mekas Consulting</title>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Roboto+Slab:wght@400;600&amp;display=swap" rel="stylesheet"/>
 <style>
+
+  body, p, div, span, li, ul, ol, section, article {
+    font-family: 'Courier Prime', monospace !important;
+    font-size: 1rem;
+    color: #1a2a6c;
+  }
+  h1, h2, h3,
+  .intro-text h1,
+  .services h2,
+  .qualifications h2,
+  .contact h2,
+  .client-scenarios h2,
+  .services li .title {
+    
+  }
+
 :root {
     scroll-padding-top: 80px;
   }
     body {
       margin: 0;
-      font-family: 'Libre Baskerville', serif;
+      font-family: 
       color: #1a2a6c;
       background-color: #f9f9f9;
       line-height: 1.6;
@@ -234,7 +250,7 @@ footer {
   }
 
   p {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 
     font-size: 1.05rem;
     line-height: 1.7;
   }
@@ -267,7 +283,7 @@ footer {
 
 @media (max-width: 768px) {
   .services li:first-of-type .description p {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 
     font-size: 1rem;
     line-height: 1.6;
   }
@@ -275,7 +291,7 @@ footer {
 
 
 .services li:first-of-type .description p {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 
   font-size: 1rem;
   line-height: 1.6;
   margin: 0 0 0.75rem 0;
@@ -285,7 +301,7 @@ footer {
 
 
 .services li .description p {
-  font-family: 'Libre Baskerville', serif;
+  
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 0.75rem;
@@ -293,7 +309,7 @@ footer {
 
 .services li .description p,
 .services li .description {
-  font-family: 'Libre Baskerville', serif;
+  
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -301,12 +317,10 @@ footer {
 
 .services li .description,
 .services li .description p {
-  font-family: 'Libre Baskerville', serif !important;
-  font-size: 0.875rem !important;
-  line-height: 1.5 !important;
-  margin-bottom: 0.75rem;
-  text-indent: 0 !important;
-  padding-left: 0 !important;
+  
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: #1a2a6c;
 }
 
 
@@ -383,6 +397,44 @@ footer {
   cursor: pointer;
 }
 
+
+
+body {
+  font-family: 'Courier Prime', monospace;
+}
+
+h1, h2, h3,
+.intro-text h1,
+.services h2,
+.qualifications h2,
+.contact h2,
+.client-scenarios h2,
+.services li .title {
+  font-family: 'Roboto Slab', serif;
+}
+
+.services li .description,
+.services li .description *,
+.intro-subtext {
+  font-family: 'Courier Prime', monospace;
+}
+
+
+body, p, div, span, li, ul, ol, section, article {
+  font-family: 'Lato', sans-serif !important;
+  font-size: 1rem;
+  color: #1a2a6c;
+}
+
+h1, h2, h3,
+.intro-text h1,
+.services h2,
+.qualifications h2,
+.contact h2,
+.client-scenarios h2,
+.services li .title {
+  font-family: 'Roboto Slab', serif !important;
+}
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -405,6 +457,12 @@ footer {
       });
     });
   </script>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Courier+Prime&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Courier+Prime&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header style="position: relative;">
@@ -418,17 +476,24 @@ footer {
 </nav>
 </header>
 <!-- Main Intro Section with Photo -->
+
+
+
+
 <section class="main-content intro-section">
-<div class="intro-photo">
-<img alt="Consultant Photo" src="headshot.jpg" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-<p style="margin-top: 0.5rem; font-weight: bold; font-size: 2rem; color: #1a2a6c;">Michael Mekas</p>
-</div>
-<div class="intro-text">
-<h1 style="font-size: 2rem; font-weight: 700; color: #1a2a6c;">An Experienced IT SOX Advisor on Your Side</h1>
-<p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1rem;">Ongoing support, practical guidance, and senior-level expertise—without the full-time hire.</p>
-<p>I help companies design, strengthen, and manage their IT control environments with targeted, long-term support. Whether you're preparing for SOX compliance, managing external audit pressure, or just need to get your controls in order, I provide dedicated guidance you can rely on.</p>
-</div>
+  <div class="intro-photo" style="display: inline-block; text-align: right;">
+    <img alt="Consultant Photo" src="headshot.jpg" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: block; margin: 0 auto;"/>
+    <p >Founder, Mekas Consulting</p>
+  </div>
+  <div class="intro-text">
+    <h1 >Michael Mekas</h1>
+    <p >Helping companies get IT SOX right — from the start.</p>
+  </div>
 </section>
+
+
+
+
 <!-- Services Section (now below main content) -->
 <section class="services" id="services">
 <h2>Services</h2>
@@ -465,7 +530,7 @@ footer {
 <p>In these situations, I typically support clients at around 15 hours per week — enough to drive progress without the need for a full-time hire. That said, I’m flexible with timing and involvement depending on your needs.</p>
 
 </section>
-<div style="max-width: 800px; margin: 0 auto 2rem auto; padding: 1rem 0;"><blockquote style="font-style: italic; color: #555; border-left: 3px solid #d4dce7; padding-left: 1rem; margin: 0;">“When controls are designed effectively from the beginning, everything downstream — from operations to audits and testing — becomes far more efficient and manageable.”</blockquote></div>
+<div style="max-width: 800px; margin: 0 auto 2rem auto; padding: 1rem 0;"><blockquote >“When controls are designed effectively from the beginning, everything downstream — from operations to audits and testing — becomes far more efficient and manageable.”</blockquote></div>
 <!-- About Me Section (now below services) -->
 <!-- About Me Section (now with photo included) -->
 <section id="about" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; padding: 4rem 1rem; max-width: 1200px; margin: auto;">
