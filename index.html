@@ -435,6 +435,16 @@ h1, h2, h3,
 .services li .title {
   font-family: 'Roboto Slab', serif !important;
 }
+
+@media (max-width: 768px) {
+  .intro-photo p {
+    font-size: 0.75rem;
+    color: #1a2a6c;
+    margin-top: 0.5rem;
+    text-align: right;
+    padding-right: 1rem;
+  }
+}
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -457,12 +467,9 @@ h1, h2, h3,
       });
     });
   </script>
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Courier+Prime&display=swap" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Courier+Prime&display=swap" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&amp;family=Roboto+Slab:wght@400;700&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
 <header style="position: relative;">
@@ -476,24 +483,16 @@ h1, h2, h3,
 </nav>
 </header>
 <!-- Main Intro Section with Photo -->
+<section class="main-content intro-section"><div class="intro-text">
+<h1>Michael Mekas</h1>
+<p>Helping companies get IT SOX right — from the start.</p>
+</div><div class="intro-photo" style="display: inline-block; text-align: right;">
+<img alt="Consultant Photo" src="headshot.jpg" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: block; margin: 0 auto;"/>
+<p>Founder, Mekas Consulting</p>
+</div>
 
 
-
-
-<section class="main-content intro-section">
-  <div class="intro-photo" style="display: inline-block; text-align: right;">
-    <img alt="Consultant Photo" src="headshot.jpg" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: block; margin: 0 auto;"/>
-    <p >Founder, Mekas Consulting</p>
-  </div>
-  <div class="intro-text">
-    <h1 >Michael Mekas</h1>
-    <p >Helping companies get IT SOX right — from the start.</p>
-  </div>
 </section>
-
-
-
-
 <!-- Services Section (now below main content) -->
 <section class="services" id="services">
 <h2>Services</h2>
@@ -528,9 +527,8 @@ h1, h2, h3,
 <li class="alt1">Looking for a steady resource to support IT risk, access design, and control documentation</li>
 </ul>
 <p>In these situations, I typically support clients at around 15 hours per week — enough to drive progress without the need for a full-time hire. That said, I’m flexible with timing and involvement depending on your needs.</p>
-
 </section>
-<div style="max-width: 800px; margin: 0 auto 2rem auto; padding: 1rem 0;"><blockquote >“When controls are designed effectively from the beginning, everything downstream — from operations to audits and testing — becomes far more efficient and manageable.”</blockquote></div>
+<div style="max-width: 800px; margin: 0 auto 2rem auto; padding: 1rem 0;"><blockquote>“When controls are designed effectively from the beginning, everything downstream — from operations to audits and testing — becomes far more efficient and manageable.”</blockquote></div>
 <!-- About Me Section (now below services) -->
 <!-- About Me Section (now with photo included) -->
 <section id="about" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; padding: 4rem 1rem; max-width: 1200px; margin: auto;">
@@ -603,12 +601,10 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-
 <script>
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
 </script>
-
 </body>
 </html>
