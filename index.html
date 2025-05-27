@@ -518,6 +518,37 @@ header {
     margin-bottom: 0.3rem;
   }
 }
+
+@media (max-width: 768px) {
+  .services li .description {
+    padding-left: 1rem !important;
+    text-indent: 0 !important;
+  }
+
+  .services li .description br {
+    display: block;
+    content: "";
+    margin-bottom: 0.3rem;
+  }
+
+  .services li .description::before {
+    content: none !important;
+  }
+
+  .services li .description p {
+    margin: 0.5rem 0 !important;
+    padding-left: 0 !important;
+    text-indent: 0 !important;
+    display: block;
+  }
+
+  .services li .description span,
+  .services li .description div {
+    display: block;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+}
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
