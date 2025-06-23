@@ -703,17 +703,40 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
+<script></script><script>
+document.addEventListener("DOMContentLoaded", function () {
   const serviceItems = document.querySelectorAll(".services li");
 
   serviceItems.forEach(item => {
-    item.addEventListener("click", function() {
-      const desc = this.querySelector(".description");
-      if (desc) {
-        desc.style.display = (desc.style.display === "block") ? "none" : "block";
+    item.addEventListener("click", function (e) {
+      // Only enable toggle for mobile devices
+      if (window.innerWidth <= 768) {
+        const desc = item.querySelector(".description");
+
+        if (!desc) return;
+
+        const isVisible = desc.style.display === "block";
+
+        // Hide all other descriptions
+        document.querySelectorAll(".services .description").forEach(d => {
+          d.style.display = "none";
+        });
+
+        // Toggle visibility of this one
+        desc.style.display = isVisible ? "none" : "block";
+
+        e.stopPropagation();
       }
     });
   });
-});
 
+  // Optional: clicking elsewhere closes any open box
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".services li")) {
+      document.querySelectorAll(".services .description").forEach(d => {
+        d.style.display = "none";
+      });
+    }
+  });
+});
+</script></body></html>
