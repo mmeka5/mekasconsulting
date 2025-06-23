@@ -10,18 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Roboto+Slab:wght@400;600&amp;display=swap" rel="stylesheet"/>
 <style>
 
-  body, p, div, span, li, ul, ol, section, article {
-    font-family: 'Courier Prime', monospace !important;
-    font-size: 1rem;
-    color: #1a2a6c;
-  }
+  body { font-family: 'Lato', sans-serif; color: #1a2a6c; font-size: 1rem; }
   h1, h2, h3,
   .intro-text h1,
   .services h2,
   .qualifications h2,
   .contact h2,
   .client-scenarios h2,
-  .services li .title {
+  .services li .title { font-family: 'Roboto Slab', serif; font-weight: 600; 
     
   }
 
@@ -232,7 +228,7 @@ footer {
 }
 
 
-  h1, h2, h3 {
+  h1, h2, h3 { font-family: 'Roboto Slab', serif; font-weight: 600; 
     font-family: 'Roboto Slab', serif;
     font-weight: 600;
   }
@@ -379,28 +375,15 @@ footer {
 }
 
 /* Option 3: Full border, subtle inner shadow */
-.services li.alt3 {
-  border: 1px solid #d0d0d0;
-  background: #f9f9f9;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
-}
 
 
-.services li.alt3 {
-  border: 1px solid #d0d0d0;
-  background: #f9f9f9;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-  cursor: pointer;
-}
+
+
 
 
 
 body {
-  font-family: 'Courier Prime', monospace;
+  
 }
 
 h1, h2, h3,
@@ -409,22 +392,15 @@ h1, h2, h3,
 .qualifications h2,
 .contact h2,
 .client-scenarios h2,
-.services li .title {
+.services li .title { font-family: 'Roboto Slab', serif; font-weight: 600; 
   font-family: 'Roboto Slab', serif;
 }
 
-.services li .description,
-.services li .description *,
-.intro-subtext {
-  font-family: 'Courier Prime', monospace;
+
 }
 
 
-body, p, div, span, li, ul, ol, section, article {
-  font-family: 'Lato', sans-serif !important;
-  font-size: 1rem;
-  color: #1a2a6c;
-}
+body { font-family: 'Lato', sans-serif; color: #1a2a6c; font-size: 1rem; }
 
 h1, h2, h3,
 .intro-text h1,
@@ -432,7 +408,7 @@ h1, h2, h3,
 .qualifications h2,
 .contact h2,
 .client-scenarios h2,
-.services li .title {
+.services li .title { font-family: 'Roboto Slab', serif; font-weight: 600; 
   font-family: 'Roboto Slab', serif !important;
 }
 
@@ -549,6 +525,75 @@ header {
     margin-left: 0 !important;
   }
 }
+
+.intro-section {
+  position: relative;
+  background-color: #fdf8f2;
+  padding: 5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  overflow: hidden;
+  z-index: 1;
+}
+.intro-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.05;
+  z-index: 0;
+}
+.intro-section > * {
+  position: relative;
+  z-index: 2;
+}
+.services li.alt3 {
+  border: 1px solid #d0d0d0;
+  background: #f9f9f9;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.services li .description,
+.services li .description * {
+  font-family: 'Lato', sans-serif !important;
+}
+
+.services li .description,
+.services li .description *,
+.intro-text p,
+#about p,
+#faq p,
+#what-i-do p,
+#what-i-do li,
+footer,
+body,
+p,
+ul,
+li {
+  font-family: 'Lato', sans-serif !important;
+}
+
+body {
+  background-color: #fdf8f2;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-repeat: repeat;
+  background-position: top left;
+  background-attachment: fixed;
+  background-size: auto;
+}
+section {
+  background-color: white;
+}
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -588,7 +633,7 @@ header {
 </nav>
 </header>
 <!-- Main Intro Section with Photo -->
-<section class="main-content intro-section" style="background-color: #fdf8f2 !important; padding: 5rem 2rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.05);"><div class="intro-photo" style="display: inline-block; text-align: right;">
+<section class="main-content intro-section"><div class="intro-photo" style="display: inline-block; text-align: right;">
 <img alt="Consultant Photo" src="headshot.jpg" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: block; margin: 0 auto;"/>
 <div style="margin-top: 1rem; text-align: left; padding-left: 0.75rem; max-width: 300px; margin-left: auto; margin-right: auto;"><h2 style="font-size: 1.85rem; margin-bottom: 1rem; border-bottom: 2px solid #1a2a6c; padding-bottom: 0.25rem;">Michael Mekas</h2><p style="margin-top: -0.5rem; font-style:">Senior IT Risk and Controls Advisor<br/><span style="font-style: italic;">Founder, Mekas Consulting</span></p></div></div><div class="intro-text" style="margin-top: -2rem;">
 <div><p>
