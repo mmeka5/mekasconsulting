@@ -637,6 +637,52 @@ section {
     color: #1a2a6c;
   }
 }
+
+@media (max-width: 768px) {
+  .intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-section .intro-photo {
+    order: 1;
+    text-align: center !important;
+    margin-bottom: 1rem;
+  }
+
+  .intro-section .intro-photo img {
+    width: 160px !important;
+    height: 160px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    margin: 0 auto 0.5rem auto !important;
+    display: block !important;
+  }
+
+  .mobile-name-block {
+    margin-bottom: 1.25rem;
+    text-align: center !important;
+    font-size: 0.95rem;
+    color: #1a2a6c;
+  }
+
+  .mobile-name-block p {
+    margin: 0;
+  }
+
+  .intro-section .intro-text {
+    order: 2;
+    width: 100%;
+    margin-top: 1rem !important;
+    text-align: left !important;
+  }
+
+  .intro-section .intro-photo h2 {
+    display: none !important;
+  }
+}
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -676,12 +722,12 @@ section {
 </header>
 <!-- Main Intro Section with Photo -->
 <section class="main-content intro-section"><div class="intro-photo" style="display: inline-block; text-align: right;">
-<img alt="Consultant Photo" src="headshot.jpg" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: block; margin: 0 auto;"/>
-<div class="mobile-name-block" style="text-align: center; font-size: 0.95rem; color: #1a2a6c; margin-top: 0.75rem;">
+<img alt="Consultant Photo" src="headshot.jpg" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: block; margin: 0 auto;"/><div class="mobile-name-block" style="text-align: center; font-size: 0.95rem; color: #1a2a6c; margin-top: 0.75rem;">
 <p style="margin: 0; font-family: 'Roboto Slab', serif; font-weight: 600; font-size: 1.25rem;">Michael Mekas</p>
 <p style="margin: 0;">Senior IT Risk and Controls Advisor</p>
 <p style="margin: 0;"><em>Founder, Mekas Consulting</em></p>
-</div></div><div class="intro-text" style="margin-top: -2rem;">
+</div>
+</div><div class="intro-text" style="margin-top: -2rem;">
 <div><p>
 IT compliance can come with a lot of noise. And unless you have someone asking the right questions and helping guide the process, that noise can easily become overwhelming - and lead to a lot of unnecessary work. 
 </p><p>
