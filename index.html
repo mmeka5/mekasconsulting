@@ -3,115 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mekas Consulting | IT SOX & Compliance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #0f172a; /* Deep professional navy */
-            color: #f8fafc;
-            line-height: 1.4;
-        }
-
-        .container {
-            padding: 40px 24px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .header-tag {
-            color: #38bdf8; /* Soft blue accent */
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 2px;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .hero-text {
-            font-size: 42px;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 80px;
-            letter-spacing: -1px;
-        }
-
-        .stack-item {
-            margin-bottom: 100px; /* Space between points */
-        }
-
-        .big-label {
-            font-size: 32px;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 12px;
-            color: #ffffff;
-        }
-
-        .description {
-            font-size: 18px;
-            color: #94a3b8; /* Muted slate for readability */
-            max-width: 90%;
-        }
-
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, #334155, transparent);
-            margin-bottom: 40px;
-        }
-
-        .cta-box {
-            background-color: #1e293b;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            margin-top: 50px;
-            border: 1px solid #334155;
-        }
-
-        .cta-btn {
-            background-color: #f8fafc;
-            color: #0f172a;
-            padding: 16px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-block;
-            margin-top: 10px;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .manifesto-border { border-left: 8px solid #2563eb; }
+        .drawer-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .drawer-open .drawer-content { max-height: 1000px; padding-top: 1.5rem; }
+        .drawer-open .plus-icon { transform: rotate(45deg); }
     </style>
 </head>
-<body>
+<body class="bg-white text-slate-900 antialiased">
 
-<div class="container">
-    <span class="header-tag">The Anti-Firm Model</span>
-    <h1 class="hero-text">Big Firm Expertise.<br>Zero Layers.</h1>
+    <section class="pt-20 pb-16 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+            <img src="headshot.jpg" alt="Mekas" class="w-full h-full object-cover rounded-2xl shadow-xl grayscale hover:grayscale-0 transition duration-500 bg-slate-200">
+        </div>
+        <div class="flex-1 text-center md:text-left">
+            <h1 class="text-xl font-bold text-blue-600 tracking-tight mb-2">MEKAS CONSULTING</h1>
+            <h2 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-4">
+                Senior-Led IT SOX. <br>Zero Layers.
+            </h2>
+            <p class="text-xl text-slate-600 max-w-xl leading-relaxed">
+                I provide 12+ years of specialized compliance leadership for public companies who are tired of the "firm" overhead and junior-level execution.
+            </p>
+        </div>
+    </section>
 
-    <div class="stack-item">
-        <span class="big-label">No Game of Telephone.</span>
-        <p class="description">You hire the expert, you work with the expert. No account managers, no layers of communication, just direct technical strategy.</p>
-    </div>
+    <section class="bg-slate-900 py-24 px-6 text-white">
+        <div class="max-w-4xl mx-auto space-y-20">
+            
+            <div class="manifesto-border pl-8">
+                <h3 class="text-3xl md:text-4xl font-black mb-4">Direct Access. Zero Layers.</h3>
+                <p class="text-xl text-slate-400 leading-relaxed">
+                    No account managers. No communication silos. You have my cell phone number. You get answers in minutes, not days.
+                </p>
+            </div>
 
-    <div class="divider"></div>
+            <div class="manifesto-border pl-8 border-blue-500">
+                <h3 class="text-3xl md:text-4xl font-black mb-4">Senior-Led Execution.</h3>
+                <p class="text-xl text-slate-400 leading-relaxed">
+                    No "bait and switch" where a partner sells the work and a junior associate executes it. You hire the expert; you get the expert.
+                </p>
+            </div>
 
-    <div class="stack-item">
-        <span class="big-label">No Junior Associates.</span>
-        <p class="description">You aren’t paying to train a first-year staffer on your dime. I execute every control, walkthrough, and report personally.</p>
-    </div>
+            <div class="manifesto-border pl-8 border-blue-400">
+                <h3 class="text-3xl md:text-4xl font-black mb-4">Audit-Ready, Every Time.</h3>
+                <p class="text-xl text-slate-400 leading-relaxed">
+                    Because I’m the one doing the work, the documentation is done right the first time. No re-work. No missed deadlines. No excuses.
+                </p>
+            </div>
 
-    <div class="divider"></div>
+        </div>
+    </section>
 
-    <div class="stack-item">
-        <span class="big-label">No Institutional Bloat.</span>
-        <p class="description">IT SOX is complex enough. My process is lean, focused on audit-readiness, and moves at the speed of your business.</p>
-    </div>
+    <section class="py-24 px-6 max-w-4xl mx-auto">
+        <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4">The Engagement Model</h3>
+        <h4 class="text-4xl font-black mb-8 italic text-slate-900 underline decoration-blue-500 decoration-8 underline-offset-8">Fractional Support</h4>
+        <p class="text-xl text-slate-600 leading-relaxed mb-10">
+            Compliance isn't a project; it's a cycle. I partner with companies on a **flat-fee monthly retainer** to provide steady, year-round oversight. I catch gaps in April so there are no material weaknesses in December.
+        </p>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                <h5 class="font-bold mb-2">Continuous Monitoring</h5>
+                <p class="text-slate-600">Monthly ITGC health checks and access reviews to keep you audit-ready 365 days a year.</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                <h5 class="font-bold mb-2">Audit Liaison</h5>
+                <p class="text-slate-600">I handle your external auditors directly. I speak their language and defend your controls so you don't have to.</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="cta-box">
-        <p style="margin:0 0 15px 0; color: #cbd5e1;">Tired of the big-firm overhead?</p>
-        <a href="#" class="cta-btn">Talk Directly to the Expert</a>
-    </div>
-</div>
+    <section class="bg-slate-50 py-24 px-6 border-y border-slate-200">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-4xl font-black mb-12">Core Capabilities</h3>
+            <div class="space-y-4">
+                <div class="bg-white border border-slate-200 rounded-xl p-6 cursor-pointer" onclick="toggleDrawer(this)">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold">IPO Readiness & ITGC Design</span>
+                        <span class="plus-icon text-2xl text-slate-400 transition-transform">+</span>
+                    </div>
+                    <div class="drawer-content text-slate-600 leading-relaxed">
+                        Establishing PCAOB-level documentation for high-growth companies. From scoping critical applications to SDLC control design, I build the foundation for your public market debut.
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
 
+    <section class="py-24 px-6 max-w-4xl mx-auto border-b border-slate-200">
+        <h3 class="text-3xl font-black mb-8">Professional Integrity, Family First.</h3>
+        <div class="text-lg text-slate-600 space-y-6">
+            <p>I founded Mekas Consulting with a simple premise: Expertise should be accessible. After a decade in the firm environment, I chose to build a solo practice that prioritizes deep partnership over scale.</p>
+            <p>I live in Georgia with my three young children. My goal is to build long-term relationships with a handful of clients who value a dedicated expert who is personally invested in their success.</p>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center px-6">
+        <a href="mailto:hello@mekasconsulting.com" class="text-3xl font-black hover:text-blue-600 transition underline underline-offset-8">hello@mekasconsulting.com</a>
+        <p class="mt-8 text-slate-400">© 2026 Mekas Consulting LLC | Georgia</p>
+    </footer>
+
+    <script>
+        function toggleDrawer(element) {
+            element.classList.toggle('drawer-open');
+        }
+    </script>
 </body>
 </html>
