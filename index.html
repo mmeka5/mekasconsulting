@@ -9,9 +9,12 @@
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .manifesto-border { border-left: 8px solid #ffffff; }
-        .drawer-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-        .drawer-open .drawer-content { max-height: 1000px; padding-top: 1.5rem; }
-        .drawer-open .plus-icon { transform: rotate(45deg); }
+        
+        /* Drawer Logic */
+        .drawer-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.3s ease; opacity: 0; }
+        .drawer-open .drawer-content { max-height: 1000px; opacity: 1; margin-top: 1.5rem; }
+        .plus-icon { transition: transform 0.4s ease; }
+        .drawer-open .plus-icon { transform: rotate(45deg); color: #2563eb; }
     </style>
 </head>
 <body class="bg-white text-slate-900 antialiased">
@@ -22,8 +25,9 @@
                 Mekas <span class="text-blue-600">Consulting</span>
             </span>
             <div class="hidden md:flex gap-8 text-xs font-black uppercase tracking-widest text-slate-500">
+                <a href="#how-i-work" class="hover:text-blue-600 transition">How I Work</a>
                 <a href="#services" class="hover:text-blue-600 transition">Services</a>
-                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#about" class="hover:text-blue-600 transition">About Me</a>
             </div>
             <a href="mailto:michael@mekasconsulting.com" class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-600 transition shadow-lg shadow-slate-200">
                 Get in Touch
@@ -43,11 +47,15 @@
                 IT SOX & Controls Advisor
             </h2>
             <div class="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed space-y-6">
+                <p class="font-bold text-slate-900 italic">
+                    The technical standard of a Big 4 firm. <br class="hidden md:block">
+                    The agility of an independent partner.
+                </p>
                 <p>
                     I work with companies navigating IT SOX readiness, remediation, and ongoing compliance by helping design and operate programs that are risk-focused, defensible, and built to hold up over time.
                 </p>
                 <p>
-                    With 12+ years of IT SOX and compliance leadership, I replace the "firm overhead" with specialized, hands-on partnership—helping make things manageable instead of overwhelming.
+                    With 12+ years in the trenches of IT SOX, I swap out the 'big firm' overhead for a direct, hands-on partnership. My goal is simple: make compliance manageable so you can focus on running the business.
                 </p>
             </div>
         </div>
@@ -76,66 +84,95 @@
         </div>
     </section>
 
-    <section class="py-20 bg-slate-50 border-y border-slate-200 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-2xl md:text-4xl font-extrabold text-slate-900 leading-tight">
-                The technical standard of a Big 4 firm.<br class="hidden md:block"> The agility of an independent partner.
-            </h3>
+    <section id="how-i-work" class="py-24 px-6 max-w-6xl mx-auto border-b border-slate-100">
+        <div class="max-w-3xl">
+            <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4">How I Work</h3>
+            <h2 class="text-4xl font-black mb-8 text-slate-900">The Fractional Model</h2>
+            <div class="text-xl text-slate-600 leading-relaxed space-y-6">
+                <p>
+                    Most companies don’t need a full-time IT SOX Director, but they do need senior-level expertise. I operate on a fractional basis—providing high-level strategy and hands-on execution for a fraction of the cost of a full-time hire or a large consulting firm.
+                </p>
+                <p>
+                    Whether it’s a few hours a week for ongoing maintenance or a deep-dive project for IPO readiness, I scale my involvement to match your specific needs.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section id="services" class="py-24 px-6 max-w-4xl mx-auto">
-        <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4">Expertise</h3>
+    <section id="services" class="py-24 px-6 max-w-6xl mx-auto">
+        <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4">Services</h3>
         <h2 class="text-4xl font-black mb-12 text-slate-900">Core Capabilities</h2>
-        <div class="space-y-6 text-left">
-            <div class="bg-white border border-slate-200 rounded-xl p-8 cursor-pointer group hover:border-blue-600 transition shadow-sm" onclick="toggleDrawer(this)">
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold">IPO Readiness & ITGC Design</span>
-                    <span class="plus-icon text-3xl text-slate-300 transition-transform">+</span>
+        
+        <div class="grid md:grid-cols-2 gap-8 items-stretch">
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:border-blue-600 transition cursor-pointer h-full flex flex-col" onclick="toggleDrawer(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <h4 class="text-2xl font-bold text-slate-900 leading-tight">IPO Readiness & Gap Assessments</h4>
+                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
                 </div>
-                <div class="drawer-content text-lg text-slate-600 leading-relaxed">
-                    Establishing PCAOB-level documentation for high-growth companies. From scoping critical applications to SDLC control design, I build the foundation for your public market debut.
+                <div class="drawer-content">
+                    <p class="text-slate-600 mb-6 leading-relaxed">Establishing a PCAOB-level control environment for companies 12–18 months from going public. I perform the gap assessment, design the initial ITGC framework, and build the rigorous documentation required for a successful debut.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Scoping & Materiality:</strong> Defining the audit perimeter to prevent unnecessary scope creep.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Framework Construction:</strong> Formalizing Logical Access, Change Management, and IT Operations.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Technical Documentation:</strong> Drafting the narratives and RCMs that external auditors demand.</span></li>
+                    </ul>
                 </div>
             </div>
-            <div class="bg-white border border-slate-200 rounded-xl p-8 cursor-pointer group hover:border-blue-600 transition shadow-sm" onclick="toggleDrawer(this)">
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold">Annual Audit & Testing Support</span>
-                    <span class="plus-icon text-3xl text-slate-300 transition-transform">+</span>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:border-blue-600 transition cursor-pointer h-full flex flex-col" onclick="toggleDrawer(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <h4 class="text-2xl font-bold text-slate-900 leading-tight">Annual IT SOX Testing (Execution)</h4>
+                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
                 </div>
-                <div class="drawer-content text-lg text-slate-600 leading-relaxed">
-                    Full lifecycle ownership of your IT SOX program. I handle the heavy lifting of management testing so your internal IT team can focus on operations.
+                <div class="drawer-content">
+                    <p class="text-slate-600 mb-6 leading-relaxed">I take full ownership of your testing program, acting as your go-to compliance lead without the headcount cost. I manage the entire cycle, from initial walkthroughs to year-end.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Walkthrough Leadership:</strong> Coordinating with process owners to validate control design.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Sample Testing:</strong> Executing rigorous testing of operating effectiveness.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Evidence Management:</strong> Organizing audit-ready workpapers to minimize Big 4 friction.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:border-blue-600 transition cursor-pointer h-full flex flex-col" onclick="toggleDrawer(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <h4 class="text-2xl font-bold text-slate-900 leading-tight">Audit Defense & Liaison</h4>
+                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
+                </div>
+                <div class="drawer-content">
+                    <p class="text-slate-600 mb-6 leading-relaxed">I act as the primary "interpreter" between your IT team and the auditors. I speak their language and defend your controls so your team doesn't have to spend their days in audit meetings.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Request Management:</strong> Vetting and streamlining auditor request lists to ensure requests are reasonable and clear.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Technical Defense:</strong> Advocating for your existing processes to prevent unnecessary findings.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Scope Control:</strong> Keeping auditors focused on high-risk areas to reduce billable hours.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:border-blue-600 transition cursor-pointer h-full flex flex-col" onclick="toggleDrawer(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <h4 class="text-2xl font-bold text-slate-900 leading-tight">Remediation & Controls Optimization</h4>
+                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
+                </div>
+                <div class="drawer-content">
+                    <p class="text-slate-600 mb-6 leading-relaxed">Cleaning up after a difficult audit or a significant deficiency. I don't just find the gaps; I work with your team to implement practical solutions that fix the issues long-term.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Gap Analysis:</strong> Identifying the root cause of deficiencies or failed controls.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Practical Fixes:</strong> Designing sustainable control processes that resolve deficiencies while minimizing manual effort.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Validation Testing:</strong> Re-testing remediated controls to ensure they are defensible before year-end.</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="model" class="bg-slate-50 py-24 px-6 border-y border-slate-200">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4">Engagement Model</h3>
-            <h4 class="text-4xl font-black mb-10 text-slate-900 underline decoration-blue-600 decoration-8 underline-offset-8">Fractional Support</h4>
-            <p class="text-xl text-slate-600 leading-relaxed mb-12">
-                Compliance is a continuous cycle. I partner with companies on a <strong>flat-fee monthly retainer</strong> to provide steady oversight. I catch gaps in April so there are no material weaknesses in December.
-            </p>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="bg-white p-10 rounded-2xl border border-slate-200 shadow-sm">
-                    <h5 class="text-xl font-bold mb-4 text-slate-900">Steady-State Monitoring</h5>
-                    <p class="text-slate-600 leading-relaxed">Monthly ITGC health checks, access reviews, and change management oversight to keep your environment audit-ready year-round.</p>
-                </div>
-                <div class="bg-white p-10 rounded-2xl border border-slate-200 shadow-sm">
-                    <h5 class="text-xl font-bold mb-4 text-slate-900">Audit Liaison</h5>
-                    <p class="text-slate-600 leading-relaxed">I act as the primary point of contact for external auditors. I speak their language and defend your controls so your team doesn't have to.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-24 px-6 max-w-6xl mx-auto">
+    <section id="about" class="py-24 px-6 max-w-6xl mx-auto border-t border-slate-100">
         <div class="flex flex-col md:flex-row items-start gap-12">
             <div class="flex-1 order-2 md:order-1">
-                <h3 class="text-4xl font-black mb-10 text-slate-900">Expertise with a Personal Edge.</h3>
+                <h2 class="text-4xl font-black mb-10 text-slate-900">About Me</h2>
                 <div class="text-xl text-slate-600 space-y-8 leading-relaxed">
                     <p>I founded <strong>Mekas Consulting</strong> to work more directly with the people and teams I can genuinely help—without the layers and overhead of a big firm.</p>
-                    <p>My specialty is bringing structure to IT controls in a way that actually works: clear, practical, and aligned with both business needs and audit expectations. I spent 7 years at Deloitte before moving into industry leadership, and I've since supported dozens of companies through IPO readiness, SOX 404 compliance, and remediation efforts.</p>
+                    <p>My specialty is bringing structure to IT controls in a way that actually works: clear, practical, and aligned with both business needs and audit expectations.</p>
                     <p>I live in Georgia with my wife and three young kids. Outside of work, I enjoy spending time with my family, playing tennis, coaching baseball, and generally chasing after our three young kids.</p>
                 </div>
             </div>
