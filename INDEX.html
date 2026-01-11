@@ -1,725 +1,277 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<link href="favicon-m1.png" rel="icon" type="image/png"/>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Mekas Consulting</title>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Roboto+Slab:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<style>
-
-  body, p, div, span, li, ul, ol, section, article {
-    font-family: 'Courier Prime', monospace !important;
-    font-size: 1rem;
-    color: #1a2a6c;
-  }
-  h1, h2, h3,
-  .intro-text h1,
-  .services h2,
-  .qualifications h2,
-  .contact h2,
-  .client-scenarios h2,
-  .services li .title {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mekas Consulting | IT SOX & Compliance</title>
+    <meta name="description" content="Expert IT SOX & Compliance advisory for IPO readiness, annual testing, and audit defense. 12+ years of senior-led experience without big-firm overhead.">
     
-  }
-
-:root {
-    scroll-padding-top: 80px;
-  }
-    body {
-      margin: 0;
-      font-family: 
-      color: #1a2a6c;
-      background-color: #f9f9f9;
-      line-height: 1.6;
-    }
-  @media (min-width: 769px) {
-    nav a:hover {
-      color: #0a2a6c;
-      text-decoration: underline;
-    }
-  }
-
-  button:hover {
-    background-color: #1a2a6c;
-    color: white;
-    cursor: pointer;
-  }
-    header {
-      background: white;
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #ccc;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #1a2a6c;
-      font-weight: bold;
-    }
-    section {
-      padding: 4rem 1rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .main-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-    }
-    .intro-text {
-      flex: 1 1 60%;
-    }
-    .intro-text h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    .intro-text ul {
-      padding-left: 1rem;
-    }
-    .intro-photo {
-      flex: 1 1 35%;
-      text-align: center;
-    }
-    .intro-photo img {
-      width: 100%;
-      max-width: 320px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .services ul {
-      list-style: none;
-      padding: 0;
-    }
-    .services li {
-      background: #fff;
-      padding: 1rem;
-      border-left: 4px solid #1a2a6c;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-      margin-bottom: 1rem;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .services li:hover {
-      background-color: #f0f0f0;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-    }
-    .services li .description {
-      display: none;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-    }
-    .services li:hover .description {
-      display: block;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    @media (max-width: 768px) {
-      .main-content {
-        flex-direction: column;
-        text-align: center;
-      }
-      .intro-photo, .intro-text {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
-      .intro-photo img {
-        max-width: 250px;
-      }
-    }
-@media (max-width: 768px) {
-  section {
-    padding: 3rem 1rem;
-  }
-}
-
-a img[alt="LinkedIn"]:hover {
-  opacity: 0.8;
-  transform: scale(1.05);
-  transition: all 0.3s ease;
-  }
-}
-  
-section {
-  padding: 4rem 2rem;
-  margin: 3rem auto;
-  max-width: 1200px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-body {
-  background: #eef2f7;
-}
-h2 {
-  border-left: 6px solid #1a2a6c;
-  padding-left: 1rem;
-  font-size: 1.75rem;
-}
-.intro-section {
-  background-color: #fdf8f2 !important;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-}
-footer {
-  background-color: #1a2a6c;
-  color: #ffffff;
-  padding: 2.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-  .mobile-menu-button {
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    right: 1rem;
-    top: 1.2rem;
-    z-index: 1001;
-  }
-
-  .mobile-nav.mobile-hidden {
-    display: none;
-  }
-
-  .mobile-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    padding-top: 3.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  .mobile-nav a {
-    padding: 1rem;
-    text-align: left;
-    font-weight: bold;
-    color: #1a2a6c;
-    text-decoration: none;
-    border-bottom: 1px solid #ddd;
-  }
-
-  header {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  nav {
-    flex-direction: column;
-    width: 100%;
-  }
-}
-
-
-  h1, h2, h3 {
-    font-family: 'Roboto Slab', serif;
-    font-weight: 600;
-  }
-
-  h1 {
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
-  }
-
-  h2 {
-    font-size: 1.85rem;
-    border-left: 6px solid #1a2a6c;
-    padding-left: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-family: 
-    font-size: 1.05rem;
-    line-height: 1.7;
-  }
-
-
-@media (max-width: 768px) {
-  .services li .description {
-    white-space: normal;
-  }
-
-  .services li .description br {
-    display: none;
-  }
-
-  .services li:first-of-type .description {
-    padding-left: 1rem;
-  }
-
-  .services li:first-of-type .description::before {
-    content: none;
-  }
-
-  .services li:first-of-type .description p {
-    margin: 0 0 0.75rem 0;
-    text-indent: -1.5rem;
-    padding-left: 1.5rem;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .services li:first-of-type .description p {
-    font-family: 
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-}
-
-
-.services li:first-of-type .description p {
-  font-family: 
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0 0 0.75rem 0;
-  text-indent: -1.5rem;
-  padding-left: 1.5rem;
-}
-
-
-.services li .description p {
-  
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 0.75rem;
-}
-
-.services li .description p,
-.services li .description {
-  
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-
-.services li .description,
-.services li .description p {
-  
-  font-size: 1rem !important;
-  line-height: 1.6 !important;
-  color: #1a2a6c;
-}
-
-
-@media (max-width: 768px) {
-  .services li .description p:first-of-type {
-    margin-bottom: 1.25rem !important;
-  }
-}
-
-
-.services li:first-of-type .description p {
-  text-indent: -1.25rem !important;
-  padding-left: 2rem !important;
-  margin-bottom: 0.75rem !important;
-}
-
-
-.services li:first-of-type .description p {
-  text-indent: -1rem !important;
-  padding-left: 1rem !important;
-  margin-bottom: 0.75rem !important;
-}
-
-
-.services li:first-of-type .description p {
-  display: block;
-  padding-left: 2rem !important;
-  text-indent: -1rem !important;
-  margin-bottom: 0.75rem !important;
-}
-
-
-/* Default style - solid border left (currently in use) */
-.services li {
-  background: #f5f5f5;
-  border-left: 6px solid #1a2a6c;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: background 0.3s ease;
-  cursor: pointer;
-}
-
-/* Option 1: No border, blue bar top */
-.services li.alt1 {
-  border-left: none;
-  border-top: 4px solid #1a2a6c;
-}
-
-/* Option 2: Soft shadow with rounded corners */
-.services li.alt2 {
-  border-left: none;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
-}
-
-/* Option 3: Full border, subtle inner shadow */
-.services li.alt3 {
-  border: 1px solid #d0d0d0;
-  background: #f9f9f9;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
-}
-
-
-.services li.alt3 {
-  border: 1px solid #d0d0d0;
-  background: #f9f9f9;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-  cursor: pointer;
-}
-
-
-
-body {
-  font-family: 'Courier Prime', monospace;
-}
-
-h1, h2, h3,
-.intro-text h1,
-.services h2,
-.qualifications h2,
-.contact h2,
-.client-scenarios h2,
-.services li .title {
-  font-family: 'Roboto Slab', serif;
-}
-
-.services li .description,
-.services li .description *,
-.intro-subtext {
-  font-family: 'Courier Prime', monospace;
-}
-
-
-body, p, div, span, li, ul, ol, section, article {
-  font-family: 'Lato', sans-serif !important;
-  font-size: 1rem;
-  color: #1a2a6c;
-}
-
-h1, h2, h3,
-.intro-text h1,
-.services h2,
-.qualifications h2,
-.contact h2,
-.client-scenarios h2,
-.services li .title {
-  font-family: 'Roboto Slab', serif !important;
-}
-
-@media (max-width: 768px) {
-  .intro-photo p {
-    font-size: 0.75rem;
-    color: #1a2a6c;
-    margin-top: 0.5rem;
-    text-align: right;
-    padding-right: 1rem;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobile-menu-button {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .intro-text {
-    text-align: left;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    height: 70px !important; /* reduce from original ~75px */
-    padding: 0.5rem 1rem !important;
-  }
-  .logo {
-    height: 40px !important;
-  }
-  nav {
-    top: 0;
-  }
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: white;
-}
-
-@media (max-width: 768px) {
-  .intro-section {
-    padding-top: 2.5rem !important;  /* reduce vertical space above headshot */
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1rem !important; /* slightly more vertical padding */
-    box-sizing: border-box;
-    height: 86px !important; /* explicit height to accommodate full logo */
-  }
-
-  body {
-    padding-top: 86px !important; /* match header height */
-  }
-}
-
-
-@media (max-width: 768px) {
-  .services .description {
-    padding-left: 1rem;
-    text-indent: 0;
-    display: block;
-  }
-
-  .services .description br {
-    display: block;
-    content: "";
-    margin-bottom: 0.3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .services li .description {
-    padding-left: 1rem !important;
-    text-indent: 0 !important;
-  }
-
-  .services li .description br {
-    display: block;
-    content: "";
-    margin-bottom: 0.3rem;
-  }
-
-  .services li .description::before {
-    content: none !important;
-  }
-
-  .services li .description p {
-    margin: 0.5rem 0 !important;
-    padding-left: 0 !important;
-    text-indent: 0 !important;
-    display: block;
-  }
-
-  .services li .description span,
-  .services li .description div {
-    display: block;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-  }
-}
-</style>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const headerOffset = document.querySelector('header').offsetHeight;
-      const scrollLinks = document.querySelectorAll('nav a');
-
-      scrollLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = link.getAttribute('href').substring(1);
-          const target = document.getElementById(targetId);
-          if (target) {
-            const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-            window.scrollTo({
-              top: offsetTop,
-              behavior: "smooth"
-            });
-          }
-        });
-      });
-    });
-  </script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&amp;family=Roboto+Slab:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .manifesto-border { border-left: 8px solid #ffffff; }
+        
+        /* Drawer Logic */
+        .drawer-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.3s ease; opacity: 0; }
+        .drawer-open .drawer-content { max-height: 1000px; opacity: 1; margin-top: 1.5rem; }
+        .plus-icon { transition: transform 0.4s ease; }
+        .drawer-open .plus-icon { transform: rotate(45deg); color: #2563eb; }
+
+        /* Prevents the horizontal "slide" globally */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+    </style>
 </head>
-<body>
-<header style="position: relative;">
-<div><img alt="Mekas Consulting Logo" src="img.png" style="height: 75px;"/></div>
-<div class="mobile-menu-button" onclick="toggleMenu()">☰</div>
-<nav class="mobile-nav mobile-hidden">
-<a href="#services">Services</a>
-<a href="#what-i-do">What I Do</a>
-<a href="#about">About Me</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-<!-- Main Intro Section with Photo -->
-<section class="main-content intro-section" style="background-color: #fdf8f2 !important; padding: 5rem 2rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.05);"><div class="intro-photo" style="display: inline-block; text-align: right;">
-<img alt="Consultant Photo" src="headshot.jpg" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: block; margin: 0 auto;"/>
-<div style="margin-top: 1rem; text-align: left; padding-left: 0.75rem; max-width: 300px; margin-left: auto; margin-right: auto;"><h2 style="font-size: 1.85rem; margin-bottom: 1rem; border-bottom: 2px solid #1a2a6c; padding-bottom: 0.25rem;">Michael Mekas</h2><p style="margin-top: -0.5rem; font-style:">IT Risk and Controls Advisor<br/><span style="font-style: italic;">Founder, Mekas Consulting</span></p></div></div><div class="intro-text" style="margin-top: -0.5rem;"><div><p>I bring over a decade of experience in IT risk and controls and focus on building control environments that make sense for both compliance and the business. I’ve seen what works — and what doesn’t — and help clients avoid unnecessary complexity while staying audit-ready.</p><p>I work directly with clients to help them build effective, audit-ready controls—without the layers of a traditional firm. Whether you’re preparing for an IPO, addressing control gaps, or looking to mature your compliance program, I provide senior-level support that’s responsive and grounded in real-world experience.</p><p>If you’re navigating any of these challenges and need guidance, I’m always happy to talk through next steps.</p></div></div></section>
-<!-- Services Section (now below main content) -->
-<section class="services" id="services" style="background-color: #fdf8f2;">
-<h2 style="font-size: 1.85rem; margin-bottom: 1rem; border-bottom: 2px solid #1a2a6c; padding-bottom: 0.25rem;">Services</h2>
-<ul>
-<li class="alt3"><strong>Ongoing IT SOX Advisory</strong><br/>
-<div class="description">
-        Ongoing support for companies that need experienced IT SOX guidance — without adding a full-time headcount.<br/>
-        • Hands-on help with walkthroughs, documentation, audit prep, and control remediation<br/>
-        • Support for system implementations, SDLC, and real-time stakeholder questions<br/>
-        • Available for short- or long-term engagements
-      </div>
-</li>
-<li class="alt3"><strong>IT Control Design and Implementation</strong><br/>
-<div class="description">
-        Whether you're starting from scratch or strengthening existing controls, I’ll help design and implement a sensible, audit-ready IT control framework.<br/>
-        • Identify key risks and tailor controls to your systems<br/>
-        • Align with SOX and audit requirements<br/>
-        • Collaborate with your team and provide execution support if needed
-      </div>
-</li>
-<li class="alt3"><strong>SOX Readiness and Remediation Support</strong><br/>
-<div class="description">
-        Whether you’re preparing for SOX 404 or cleaning up after a failed audit, I provide practical, audit-ready support.<br/>
-        • Readiness assessments, ITGC testing, and RCM development<br/>
-        • Tailored remediation strategies that align with your business<br/>
-        • Hands-on support to build confidence ahead of audit
-      </div>
-</li>
-<li class="alt3"><strong>Foundational Controls Support</strong><br/>
-<div class="description">
-        Helping you establish or strengthen the essential documentation your program relies on.<br/>
-        • Risk assessments, RCMs, and scoping documentation<br/>
-        • Tailored support to reflect how your business actually works<br/>
-        • Easy-to-maintain and audit-ready
-      </div>
-</li>
-<li class="alt3"><strong>One-Time Assessment</strong><br/>
-<div class="description">
-        A low-commitment way to get an experienced outside view of your IT control environment.<br/>
-        • Review of ITGCs and/or automated control design<br/>
-        • Clear write-up of risks, gaps, and practical recommendations<br/>
-        • Optional follow-up to discuss next steps
-      </div>
-</li>
-</ul>
-</section>
-<section id="what-i-do" style="background-color: #fdf8f2;">
-<h2 style="font-size: 1.85rem; margin-bottom: 1rem; border-bottom: 2px solid #1a2a6c; padding-bottom: 0.25rem;">What I Do</h2>
-<p>I help companies build and strengthen their IT control environments to meet SOX compliance requirements. Whether you’re pre-IPO, facing audit findings, or looking to mature your existing program, I provide hands-on support for:</p>
-<ul>
-<li>SOX 404 readiness and ITGC control design</li>
-<li>Remediating IT control deficiencies after audits</li>
-<li>Developing or refining risk control matrices (RCMs)</li>
-<li>Support for internal audit or external audit initiatives</li>
-<li>Building scalable IT control frameworks for growing companies</li>
-</ul>
-<p>I offer fractional IT SOX support — flexible, contract-based, and tailored to your timeline, team, and priorities. Most clients engage me for around 15 hours a week (on average), which provides continuity and focus across internal audit, SOX-specific initiatives, and broader ITGC efforts — without the commitment of a full-time role.
+<body class="bg-white text-slate-900 antialiased" x-data="{ mobileMenuOpen: false }">
 
-I typically provide around 15 hours of support per week, offering flexibility to meet your specific needs without the commitment of a full-time hire.</p>
-</section>
-<!-- About Me Section (now below services) -->
-<!-- About Me Section (now with photo included) -->
-<section id="about" style="background-color: #fdf8f2;">
-<h2 style="font-size: 1.85rem; margin-bottom: 1rem; border-bottom: 2px solid #1a2a6c; padding-bottom: 0.25rem;">About Me</h2>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem; margin-top:0;"><div style="flex: 1 1 60%; min-width: 300px;"><p style="margin-top: 0;">I’m an independent IT compliance consultant with over 10 years of experience helping companies design, assess, and improve their IT control environments. I’ve worked in both internal and external audit roles — including 7 years at Deloitte — and have since supported dozens of companies through IPO readiness, SOX 404 compliance, and remediation efforts.Starting my own consulting practice has allowed me to work more directly with the people and teams I can genuinely help, without the layers and overhead of a big firm.
-My specialty is bringing structure to IT controls in a way that actually works: clear, practical, and aligned with both business needs and audit expectations.</p><p> Outside of work, I enjoy spending time with my family, playing tennis, coaching baseball, and generally chasing after our three young kids.</p><div style="border: 1px solid #1a2a6c; padding: 1rem; border-radius: 8px; background: #f0f0f0; margin-top: 1.5rem;"><strong>Credentials &amp; Background:</strong><br/>• Certified Information Systems Auditor (CISA)<br/>• M.S. in Information Systems, Georgia State University<br/>• 10+ years of experience in IT controls and compliance</div></div>
-<div style="flex: 1 1 30%; min-width: 250px; text-align: center;">
-<img alt="About Me Pic" src="fam.jpg" style="width: 100%; max-width: 400px; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);margin-top: 0px;"/>
-</div>
-</div></section>
-<section class="section" id="faq" style="background-color: #fdf8f2;">
-<h2 style="font-size: 1.85rem; margin-bottom: 1rem; border-bottom: 2px solid #1a2a6c; padding-bottom: 0.25rem;">FAQ</h2>
-<div class="container"><h3>Can you help during a system implementation or major system change?</h3><p>Yes. I’ve supported ERP implementations, system migrations, and redesign efforts to help companies ensure their IT controls remain sound throughout major change. I can help assess risks, refine control design, and support documentation and testing efforts.</p><h3>Do you only work with pre-IPO companies?</h3><p>No. I work with companies at all stages — whether they’re maturing their controls post-IPO, responding to audit pressure, or building from scratch.</p><h3>Can you work directly with our team?</h3><p>Yes. I often work closely with IT, compliance, and internal audit teams to provide guidance, support execution, and ensure alignment with SOX expectations.</p><h3>Do you offer short-term or long-term support?</h3><p>Yes. I’m open to both — whether you need a few weeks of help with a specific issue or ongoing support as a part-time advisor.</p></div></section><section id="contact" style="background-color: #fdf8f2;">
-<h2 style="font-size: 1.85rem; margin-bottom: 1rem; border-bottom: 2px solid #1a2a6c; padding-bottom: 0.25rem;">Contact</h2>
-<p>Whether you’re exploring options, need a second opinion, or just want to run something by me — feel free to reach out. I’m happy to offer thoughts, input, or direction if it’s helpful.</p>
-<p><strong>Email:</strong> michael@mekasconsulting.com<br/>
-<strong>Phone:</strong> (404) 335-8592</p>
-<div style="margin-top: 1rem;">
-<a href="https://www.linkedin.com/in/michael-mekas/" style="display: inline-block;" target="_blank">
-<img alt="LinkedIn" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" style="width: 32px; height: 32px;" title="Connect with me on LinkedIn"/>
-</a>
-</div>
-</section>
-<footer>
-<p>© 2025 Mekas Consulting, LLC. All rights reserved.</p>
-</footer>
-<script>
-function toggleMenu() {
-  const nav = document.querySelector('.mobile-nav');
-  if (nav.classList.contains('mobile-hidden')) {
-    nav.classList.remove('mobile-hidden');
-  } else {
-    nav.classList.add('mobile-hidden');
-  }
-}
-</script>
-<script>
-function toggleMenu() {
-  const nav = document.querySelector('.mobile-nav');
-  nav.classList.toggle('mobile-hidden');
-}
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
+            
+            <a href="#" class="flex items-center hover:opacity-80 transition-opacity">
+                <div class="flex items-baseline">
+                    <span class="text-xl md:text-2xl font-black text-slate-900 uppercase" style="letter-spacing: -0.05em;">
+                        Mekas
+                    </span>
+                    <span class="ml-1 text-xl md:text-2xl font-black text-blue-600 uppercase" style="letter-spacing: -0.05em;">
+                        Consulting
+                    </span>
+                </div>
+            </a>
 
-document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll('.mobile-nav a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-      document.querySelector('.mobile-nav').classList.add('mobile-hidden');
-    });
-  });
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const serviceItems = document.querySelectorAll(".services li");
+            <div class="hidden md:flex gap-8 text-xs font-black uppercase tracking-widest text-slate-500">
+                <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                <a href="#how-i-work" class="hover:text-blue-600 transition">Fractional Support</a>
+                <a href="#about" class="hover:text-blue-600 transition">About Me</a>
+            </div>
 
-  serviceItems.forEach(item => {
-    item.addEventListener("click", function() {
-      const desc = this.querySelector(".description");
-      if (desc) {
-        desc.style.display = (desc.style.display === "block") ? "none" : "block";
-      }
-    });
-  });
-});
-</script>
-<script>
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
-</script>
+            <div class="flex items-center gap-4">
+                <a href="https://calendly.com/michael-mekasconsulting/30min" target="_blank" class="hidden sm:inline-block bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">
+                    Schedule Fit Call
+                </a>
+
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 text-slate-600 hover:text-blue-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div x-show="mobileMenuOpen" 
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-4"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="md:hidden bg-white border-b border-slate-200 px-8 py-6 space-y-4 shadow-xl">
+            <a @click="mobileMenuOpen = false" href="#services" class="block text-sm font-black uppercase tracking-widest text-slate-600 hover:text-blue-600">Services</a>
+            <a @click="mobileMenuOpen = false" href="#how-i-work" class="block text-sm font-black uppercase tracking-widest text-slate-600 hover:text-blue-600">Fractional Support</a>
+            <a @click="mobileMenuOpen = false" href="#about" class="block text-sm font-black uppercase tracking-widest text-slate-600 hover:text-blue-600">About Me</a>
+            <a href="https://calendly.com/michael-mekasconsulting/30min" target="_blank" class="block sm:hidden bg-blue-600 text-white text-center px-5 py-3 rounded-xl text-sm font-bold">Schedule Fit Call</a>
+        </div>
+    </nav>
+
+    <section class="pt-32 md:pt-40 pb-32 px-8 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 text-center md:text-left">
+        <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+            <img src="headshot.jpg" alt="Michael Mekas" class="w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-white">
+        </div>
+        <div class="flex-1">
+            <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-2">Michael Mekas</h1>
+            <h2 class="text-xl md:text-2xl font-bold text-blue-600 mb-6 uppercase tracking-wide">IT SOX & Controls Advisor</h2>
+            <div class="text-lg md:text-xl text-slate-600 max-w-2xl leading-loose space-y-6">
+                <p class="font-bold text-slate-900 italic -mx-4 md:mx-0">
+                    The technical standard of a Big 4 firm. <br class="hidden md:block">
+                    The agility of an independent&nbsp;partner.
+                </p>
+                <p class="text-left">I work with companies navigating IT SOX readiness, remediation, and ongoing compliance by helping design and operate programs that are risk-focused, defensible, and built to hold up over time.</p>
+                <p class="text-left">With 12+ years in the trenches of IT SOX, I swap out the 'big firm' overhead for a direct, hands-on partnership. My goal is simple: make compliance manageable so you can focus on running the business.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-900 py-24 px-8 text-white">
+        <div class="max-w-4xl mx-auto space-y-20">
+            <div class="manifesto-border pl-8 border-white">
+                <h3 class="text-2xl md:text-4xl font-black mb-4 uppercase tracking-tight text-left">Direct Access. Zero Layers.</h3>
+                <p class="text-lg md:text-xl text-slate-400 leading-loose font-light italic text-left">No account managers, no layers of communication. You have my cell phone number. You get answers in minutes, not days.</p>
+            </div>
+            <div class="manifesto-border pl-8 border-white">
+                <h3 class="text-2xl md:text-4xl font-black mb-4 uppercase tracking-tight text-left">Senior-Led Execution.</h3>
+                <p class="text-lg md:text-xl text-slate-400 leading-loose font-light italic text-left">No "bait and switch" where a partner sells the work and a junior does it. One senior practitioner from start to finish.</p>
+            </div>
+            <div class="manifesto-border pl-8 border-white">
+                <h3 class="text-2xl md:text-4xl font-black mb-4 uppercase tracking-tight text-left">Audit-Ready, Every Time.</h3>
+                <p class="text-lg md:text-xl text-slate-400 leading-loose font-light italic text-left">Because I’m doing the work, the documentation is done right the first time. No re-work. No missed deadlines.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 px-8 max-w-6xl mx-auto">
+        <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4 text-left">Services</h3>
+        <h2 class="text-4xl font-black mb-6 text-slate-900 text-left">Core Capabilities</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-6">
+            <div class="bg-white border border-slate-200 rounded-2xl py-8 px-6 shadow-sm hover:border-blue-600 transition cursor-pointer flex flex-col h-full" onclick="toggleDrawer(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left">IPO Readiness & Gap Assessments</h4>
+                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
+                </div>
+                <div class="drawer-content text-left">
+                    <p class="text-slate-600 mb-6 leading-relaxed">Establishing a PCAOB-level control environment for companies 12–18 months from going public. I perform the gap assessment, design the initial ITGC framework, and build the rigorous documentation required for a successful debut.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Scoping & Materiality:</strong> Defining the audit perimeter to prevent unnecessary scope creep.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Framework Construction:</strong> Formalizing Logical Access, Change Management, and IT Operations.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Technical Documentation:</strong> Drafting the narratives and RCMs that external auditors demand.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:border-blue-600 transition cursor-pointer h-full flex flex-col" onclick="toggleDrawer(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left">Annual IT SOX Testing (Execution)</h4>
+                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
+                </div>
+                <div class="drawer-content text-left">
+                    <p class="text-slate-600 mb-6 leading-relaxed">I take full ownership of your testing program, acting as your go-to compliance lead without the headcount cost. I manage the entire cycle, from initial walkthroughs to year-end.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Walkthrough Leadership:</strong> Coordinating with process owners to validate control design.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Sample Testing:</strong> Executing rigorous testing of operating effectiveness.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Evidence Management:</strong> Organizing audit-ready workpapers to minimize Big 4 friction.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:border-blue-600 transition cursor-pointer h-full flex flex-col" onclick="toggleDrawer(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left">Audit Defense & Liaison</h4>
+                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
+                </div>
+                <div class="drawer-content text-left">
+                    <p class="text-slate-600 mb-6 leading-relaxed">I act as the primary "interpreter" between your IT team and the auditors. I speak their language and defend your controls so your team doesn't have to spend their days in audit meetings.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Request Management:</strong> Vetting and streamlining auditor request lists to ensure requests are reasonable and clear.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Technical Defense:</strong> Advocating for your existing processes to prevent unnecessary findings.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Scope Control:</strong> Keeping auditors focused on high-risk areas to reduce billable hours.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:border-blue-600 transition cursor-pointer h-full flex flex-col" onclick="toggleDrawer(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left">Remediation & Controls Optimization</h4>
+                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
+                </div>
+                <div class="drawer-content text-left">
+                    <p class="text-slate-600 mb-6 leading-relaxed">Cleaning up after a difficult audit or a significant deficiency. I don't just find the gaps; I work with your team to implement practical solutions that fix the issues long-term.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Gap Analysis:</strong> Identifying the root cause of deficiencies or failed controls.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Practical Fixes:</strong> Designing sustainable control processes that resolve deficiencies while minimizing manual effort.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Validation Testing:</strong> Re-testing remediated controls to ensure they are defensible before year-end.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="how-i-work" class="py-24 px-8 max-w-6xl mx-auto border-t border-slate-100">
+        <div class="max-w-4xl">
+            <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4 text-left">Engagement Model</h3>
+            <h2 class="text-4xl font-black mb-6 text-slate-900 text-left">Fractional Support</h2>
+            <div class="text-xl text-slate-600 leading-loose space-y-6 text-left">
+                <p>Most companies don’t need a full-time IT SOX Director, but they do need senior-level expertise. I operate on a fractional basis, acting as a dedicated extension of your team for a fraction of the cost of a full-time hire or a large consulting firm.</p>
+                <ul class="space-y-4 pt-4">
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-600 font-bold">•</span>
+                        <span><strong>Flat-Fee Monthly Retainer:</strong> I partner with companies on a fixed-cost basis to provide steady oversight, catching gaps early to help prevent material weaknesses at year-end.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-600 font-bold">•</span>
+                        <span><strong>Scalable Involvement:</strong> Whether it’s a few hours a week for ongoing maintenance or a deep-dive project for IPO readiness, I scale my involvement to match your specific needs.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-600 font-bold">•</span>
+                        <span><strong>Predictable Results:</strong> You get 12+ years of experience and audit-ready results without the revolving door of junior associates or the unpredictability of hourly billing.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-8 max-w-6xl mx-auto border-t border-slate-100">
+        <div class="flex flex-col md:flex-row items-start gap-12">
+            <div class="flex-1 order-2 md:order-1 text-left">
+                <h2 class="text-4xl font-black mb-6 text-slate-900">About Me</h2>
+                <div class="text-xl text-slate-600 space-y-6 leading-loose">
+                    <p>I founded Mekas Consulting to work more directly with the people and teams I can genuinely help, without the layers and overhead of a big firm.</p>
+                    <p>My specialty is bringing structure to IT controls in a way that actually works: clear, practical, and aligned with both business needs and audit expectations.</p>
+                    <p>I live in Georgia with my wife and three young kids. Outside of work, I enjoy playing tennis, coaching baseball, being outdoors, and generally trying to keep up with our little ones.</p>
+                </div>
+            </div>
+            <div class="w-full md:w-96 order-1 md:order-2 flex-shrink-0">
+                <img src="fam.jpg" alt="The Mekas Family" class="w-full h-auto rounded-2xl shadow-xl border-8 border-slate-50">
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-24 px-8 max-w-6xl mx-auto">
+        <div class="bg-slate-50 rounded-3xl p-10 md:p-16 border border-slate-100 shadow-sm">
+            <h3 class="text-xs font-black uppercase tracking-[0.3em] text-blue-600 mb-12 text-center">Professional Foundation</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0">
+                <div class="md:px-8 space-y-4 text-center md:text-left">
+                    <h4 class="text-[10px] font-black uppercase tracking-widest text-slate-400">Certification</h4>
+                    <p class="text-xl font-bold text-slate-900 leading-tight">Certified Information Systems Auditor (CISA)</p>
+                </div>
+                <div class="md:px-12 space-y-4 text-center md:text-left md:border-l md:border-slate-200">
+                    <h4 class="text-[10px] font-black uppercase tracking-widest text-slate-400">Education</h4>
+                    <p class="text-xl font-bold text-slate-900 leading-tight">Master of Science in Information Systems</p>
+                    <p class="text-slate-500 font-medium italic">Georgia State University</p>
+                </div>
+                <div class="md:px-12 space-y-4 text-center md:text-left md:border-l md:border-slate-200">
+                    <h4 class="text-[10px] font-black uppercase tracking-widest text-slate-400">Software Expertise</h4>
+                    <ul class="text-sm font-bold text-slate-700 space-y-2 inline-block text-left">
+                        <li>• Oracle Fusion</li>
+                        <li>• Workday</li>
+                        <li>• NetSuite</li>
+                        <li>• Salesforce</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 bg-slate-900 text-white text-center px-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-4 italic text-slate-400">Ready to simplify your audit?</h2>
+            <p class="text-xl text-slate-400 mb-12">Book a 15-minute call to see if your program is audit-ready.</p>
+            
+            <div class="flex flex-col gap-10 justify-center items-center mb-16">
+                <a href="https://calendly.com/michael-mekasconsulting/30min" target="_blank" class="w-full sm:w-auto bg-blue-600 text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-blue-700 transition shadow-xl shadow-blue-900/20">
+                    Schedule Fit Call
+                </a>
+                
+                <a href="mailto:michael@mekasconsulting.com" class="text-xl md:text-2xl font-black text-white hover:text-blue-400 transition border-b-2 border-blue-600 hover:border-blue-400 pb-2">
+                   michael@mekasconsulting.com
+                </a>
+            </div>
+
+            <div class="flex justify-center border-t border-slate-800 pt-12">
+                <a href="https://www.linkedin.com/in/michaelmekas/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-blue-500 transition-colors transform hover:scale-110">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="mt-8 text-slate-500 text-sm tracking-[0.3em] uppercase">© 2026 Mekas Consulting LLC | Georgia</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDrawer(element) {
+            element.classList.toggle('drawer-open');
+        }
+    </script>
 </body>
 </html>
