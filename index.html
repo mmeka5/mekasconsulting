@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mekas Consulting | IT SOX & Compliance</title>
-    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="description" content="Expert IT SOX & Compliance advisory for IPO readiness, annual testing, and audit defense. 12+ years of senior-led experience without big-firm overhead.">
     
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
@@ -102,12 +103,12 @@
             </div>
             <div class="manifesto-border pl-8 border-white">
                 <h3 class="text-2xl md:text-4xl font-black mb-4 uppercase tracking-tight text-left">Senior-Led Execution.</h3>
-                <p class="text-lg md:text-xl text-slate-400 leading-loose font-light italic text-left">No "bait and switch" where a partner sells the work and a junior does it. One senior practitioner from start to finish.</p>
+                <p class="text-lg md:text-xl text-slate-400 leading-loose font-light italic text-left">You work with one senior practitioner from kickoff to audit sign-off. I personally lead the strategy and execution, bringing 12+ years of senior experience to every phase of the engagement.</p>
             </div>
             <div class="manifesto-border pl-8 border-white">
                 <h3 class="text-2xl md:text-4xl font-black mb-4 uppercase tracking-tight text-left">Right-Sized Scoping.</h3>
                 <p class="text-lg md:text-xl text-slate-400 leading-loose font-light italic text-left">
-                    I focus strictly on the controls that matter; no "one-size-fits-all" templates or unnecessary busy work. Just a lean, defensible program tailored to your specific environment and risks.
+                    I design compliance programs around the critical risks that matter, removing the noise of burdensome controls that are unnecessary to the audit.
                 </p>
             </div>
         </div>
@@ -116,18 +117,35 @@
     <section id="services" class="py-24 px-8 max-w-6xl mx-auto">
         <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4 text-left">Services</h3>
         <h2 class="text-4xl font-black mb-6 text-slate-900 text-left">Core Capabilities</h2>
+        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-6">
+            
             <div class="bg-white border border-slate-200 rounded-2xl py-8 px-6 shadow-sm hover:border-blue-600 transition cursor-pointer flex flex-col h-full" onclick="toggleDrawer(this)">
                 <div class="flex justify-between items-center gap-4">
-                    <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left">IPO Readiness & Gap Assessments</h4>
+                    <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left tracking-tight">IPO Readiness & Gap Assessments</h4>
                     <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
                 </div>
                 <div class="drawer-content text-left">
-                    <p class="text-slate-600 mb-6 leading-relaxed">Establishing a PCAOB-level control environment for companies 12–18 months from going public. I perform the gap assessment, design the initial ITGC framework, and build the rigorous documentation required for a successful debut.</p>
+                    <p class="text-slate-600 mb-6 leading-relaxed">I prepare your IT environment for the scrutiny of a public market debut by performing the initial gap assessment and designing a scalable ITGC framework that meets all necessary audit standards.</p>
                     <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Scoping & Materiality:</strong> Defining the audit perimeter to prevent unnecessary scope creep.</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Framework Construction:</strong> Formalizing Logical Access, Change Management, and IT Operations.</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Technical Documentation:</strong> Drafting the narratives and RCMs that external auditors demand.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Strategic Scoping:</strong> Identifying critical systems to prevent scope creep and ensuring your team stays focused on the risks that add actual value to the audit.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Control Design:</strong> Building practical processes for Logical Access, Change Management, and IT Operations.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Technical Documentation:</strong> Drafting the narratives, scoping documents, and risk-control matrices (RCMs) that auditors expect to see.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:border-blue-600 transition cursor-pointer h-full flex flex-col" onclick="toggleDrawer(this)">
+                <div class="flex justify-between items-center gap-4">
+                    <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left tracking-tight">Remediation & Controls Optimization</h4>
+                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
+                </div>
+                <div class="drawer-content text-left">
+                    <p class="text-slate-600 mb-6 leading-relaxed">I work directly with control owners to remediate IT audit findings and deficiencies. I don't just identify gaps, I partner with your team to build out the templates and processes needed to fix issues long-term.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Gap Analysis:</strong> Identifying the root cause of audit findings or deficiencies.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Hands-on Execution:</strong> Developing practical templates and working side-by-side with owners to complete them.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Validation Testing:</strong> Re-testing remediated controls to ensure they are defensible before year-end.</span></li>
                     </ul>
                 </div>
             </div>
@@ -162,20 +180,6 @@
                 </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:border-blue-600 transition cursor-pointer h-full flex flex-col" onclick="toggleDrawer(this)">
-                <div class="flex justify-between items-center gap-4">
-                    <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left">Remediation & Controls Optimization</h4>
-                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
-                </div>
-                <div class="drawer-content text-left">
-                    <p class="text-slate-600 mb-6 leading-relaxed">Cleaning up after a difficult audit or a significant deficiency. I don't just find the gaps; I work with your team to implement practical solutions that fix the issues long-term.</p>
-                    <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Gap Analysis:</strong> Identifying the root cause of deficiencies or failed controls.</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Practical Fixes:</strong> Designing sustainable control processes that resolve deficiencies while minimizing manual effort.</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Validation Testing:</strong> Re-testing remediated controls to ensure they are defensible before year-end.</span></li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -184,11 +188,11 @@
             <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4 text-left">Fractional Support</h3>
             <h2 class="text-4xl font-black mb-6 text-slate-900 text-left">An extension of your team</h2>
             <div class="text-xl text-slate-600 leading-loose space-y-6 text-left">
-                <p>Most companies don’t need a full-time IT SOX Director, but they do need senior-level expertise. I operate on a fractional basis, acting as an integrated partner who stays in sync with your internal staff.</p>
+                <p>Most companies don’t need a full-time IT SOX Director, but they do need senior-level expertise. I operate on a fractional basis, acting as an integrated partner who works seamlessly alongside your existing team.</p>
                 <ul class="space-y-4 pt-4">
                     <li class="flex items-start gap-3">
                         <span class="text-blue-600 font-bold">•</span>
-                        <span><strong>Flat-Fee Monthly Retainer:</strong> I partner with companies on a fixed-cost basis to provide steady oversight, catching gaps early to help prevent material weaknesses at year-end.</span>
+                        <span><strong>Flat-Fee Monthly Retainer:</strong> I partner with companies on a fixed-cost basis to provide steady oversight, ensuring your compliance program remains audit-ready year-round.</span>
                     </li>
                     <li class="flex items-start gap-3">
                         <span class="text-blue-600 font-bold">•</span>
