@@ -77,19 +77,13 @@
         </div>
     </nav>
 
-    <section class="pt-32 md:pt-40 pb-16 px-8 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 text-center md:text-left">
-        <!-- Mobile: photo + name/title side by side. Desktop: photo with name/title below -->
-        <div class="flex-shrink-0 flex flex-col items-center md:items-start">
-            <!-- Mobile layout: row with photo left, name/title right -->
-            <div class="flex flex-row md:flex-col items-center md:items-start gap-4 md:gap-0">
-                <img src="headshot.jpg" alt="Michael Mekas" class="w-32 h-32 md:w-64 md:h-64 object-cover rounded-2xl shadow-2xl border-4 border-white flex-shrink-0">
-                <div class="text-left md:text-left">
-                    <h1 class="text-2xl md:text-3xl font-black text-slate-900 leading-tight md:mt-4">Michael Mekas</h1>
-                    <h2 class="text-base md:text-l font-bold text-blue-600 uppercase tracking-wide mt-1">IT SOX & Controls Advisor</h2>
-                </div>
-            </div>
+    <section class="pt-32 md:pt-40 pb-24 px-8 max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12 text-center md:text-left">
+        <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+            <img src="headshot.jpg" alt="Michael Mekas" class="w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-white">
         </div>
         <div class="flex-1">
+            <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-2">Michael Mekas</h1>
+            <h2 class="text-xl md:text-2xl font-bold text-blue-600 mb-6 uppercase tracking-wide">IT SOX & Controls Advisor</h2>
             <div class="text-lg text-slate-600 max-w-2xl leading-loose">
                 <p class="mb-4">I've spent 12+ years on both sides of this: as an auditor at Deloitte evaluating IT control environments, and as an advisor helping companies build and manage those programs in practice.</p>
                 <p class="mb-4">Most IT SOX programs struggle for the same reason: no one truly owns them.</p>
@@ -117,19 +111,35 @@
         </div>
     </section>
 
-    <section class="py-16 px-8 max-w-6xl mx-auto border-t border-slate-100">
-        <div class="max-w-4xl">
-            <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-6">You might be in the right place if...</h3>
-            <ul class="space-y-3 text-lg text-slate-600 mb-8">
-                <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">→</span><span>You're preparing for an IPO and not sure what should actually be in scope</span></li>
-                <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">→</span><span>You've started SOX work, but things feel reactive or unclear</span></li>
-                <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">→</span><span>Audit requests are increasing and not always making sense</span></li>
-            </ul>
-            <p class="text-lg text-slate-900 font-bold">That's exactly the gap I fill. I come in as the embedded owner, setting direction and building controls that actually work.</p>
-        </div>
-    </section>
+   <section class="py-16 px-8 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="rounded-lg border border-slate-200 bg-slate-50 p-8 md:p-8 shadow-sm">
+      <p class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-6">
+        You might be in the right place if...
+      </p>
+      <ul class="space-y-4 text-lg text-slate-700 leading-relaxed">
+        <li class="flex gap-3">
+          <span class="text-blue-600">→</span>
+          <span>You're preparing for an IPO and not sure what should actually be in scope</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-blue-600">→</span>
+          <span>You've started SOX work, but things feel reactive or unclear</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-blue-600">→</span>
+          <span>Audit requests are increasing and not always making sense</span>
+        </li>
+      </ul>
 
-    <section id="services" class="py-24 px-8 max-w-6xl mx-auto">
+      <p class="mt-8 text-lg font-medium text-slate-900 leading-relaxed">
+       That's exactly the gap I fill. I come in as the embedded owner, setting direction and building controls that actually work.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <section id="services" class="py-4 px-8 max-w-6xl mx-auto">
         <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4 text-left">Services</h3>
         <h2 class="text-4xl font-black mb-6 text-slate-900 text-left">How I Can Help</h2>
  <div class="text-xl text-slate-600 leading-loose space-y-6 text-left">
