@@ -45,13 +45,12 @@
                 </div>
             </a>
 
-            <div class="hidden md:flex gap-8 text-xs font-black uppercase tracking-widest text-slate-500">
+            <div class="flex items-center gap-8">
+                <div class="hidden md:flex items-center gap-8 text-xs font-black uppercase tracking-widest text-slate-500">
                 <a href="#services" class="hover:text-blue-600 transition">Services</a>
-                <a href="#how-i-work" class="hover:text-blue-600 transition">Fractional Support</a>
                 <a href="#about" class="hover:text-blue-600 transition">About Me</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
             </div>
-
-            <div class="flex items-center gap-4">
                 <a href="https://calendly.com/michael-mekasconsulting/30min" target="_blank" class="hidden sm:inline-block bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">
                     Schedule Fit Call
                 </a>
@@ -71,8 +70,8 @@
              x-transition:enter-end="opacity-100 translate-y-0"
              class="md:hidden bg-white border-b border-slate-200 px-8 py-6 space-y-4 shadow-xl">
             <a @click="mobileMenuOpen = false" href="#services" class="block text-sm font-black uppercase tracking-widest text-slate-600 hover:text-blue-600">Services</a>
-            <a @click="mobileMenuOpen = false" href="#how-i-work" class="block text-sm font-black uppercase tracking-widest text-slate-600 hover:text-blue-600">Fractional Support</a>
             <a @click="mobileMenuOpen = false" href="#about" class="block text-sm font-black uppercase tracking-widest text-slate-600 hover:text-blue-600">About Me</a>
+            <a @click="mobileMenuOpen = false" href="#contact" class="block text-sm font-black uppercase tracking-widest text-slate-600 hover:text-blue-600">Contact</a>
             <a href="https://calendly.com/michael-mekasconsulting/30min" target="_blank" class="block sm:hidden bg-blue-600 text-white text-center px-5 py-3 rounded-xl text-sm font-bold">Schedule Fit Call</a>
         </div>
     </nav>
@@ -103,10 +102,8 @@
                 <p class="text-lg md:text-lg text-slate-400 leading-relaxed font-light italic text-left">You work with one senior practitioner from kickoff to audit sign-off. I personally lead the strategy and execution, bringing 12+ years of senior expertise to every phase.</p>
             </div>
             <div class="manifesto-border pl-8 border-white">
-                <h3 class="text-2xl md:text-4xl font-black mb-4 uppercase tracking-tight text-left">Controls That Matter.</h3>
-                <p class="text-lg md:text-lg text-slate-400 leading-relaxed font-light italic text-left">
-                    I design programs around the controls that actually matter, cutting out the ones that add burden without addressing real risk.
-                </p>
+                <h3 class="text-2xl md:text-4xl font-black mb-4 uppercase tracking-tight text-left">Get The Basics Right.</h3>
+                <p class="text-lg md:text-lg text-slate-400 leading-relaxed font-light italic text-left">Most IT SOX programs become too complicated too fast. I focus on getting the fundamentals right first, then building from there only where it actually makes sense.</p>
             </div>
         </div>
     </section>
@@ -143,62 +140,39 @@
         <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4 text-left">Services</h3>
         <h2 class="text-4xl font-black mb-6 text-slate-900 text-left">How I Can Help</h2>
  <div class="text-lg text-slate-600 leading-relaxed space-y-6 text-left">
-                <p>Whether you're preparing for an IPO, dealing with audit findings, or trying to get your IT controls program under control, here's where I typically come in:</p>        
+                <p>Whether you need someone to own your IT SOX program long-term, or help with a specific initiative, here's where I typically come in:</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-6">
-            
-            <div class="bg-white border border-slate-200 rounded-2xl py-8 px-6 shadow-sm hover:border-blue-600 transition cursor-pointer flex flex-col h-full" onclick="toggleDrawer(this)">
-                <div class="flex justify-between items-center gap-4">
-                    <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left tracking-tight">IPO Readiness & Gap Assessments</h4>
-                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
+
+            <div class="bg-white border border-slate-200 shadow-sm flex flex-col h-full" style="border-top: 3px solid #2563eb; border-radius: 0 0 1rem 1rem; padding: 2rem 1.5rem;">
+                <div class="flex items-start gap-4">
+                    <div>
+<h4 class="text-2xl font-bold text-slate-900 leading-tight text-left tracking-tight">IT SOX Program Ownership</h4>
+                        <p class="text-sm text-slate-400 italic mt-2">For companies where no one inside currently owns this</p>
+                    </div>
                 </div>
-                <div class="drawer-content text-left">
-                    <p class="text-slate-600 mb-6 leading-relaxed">I assess your current IT control environment, identify gaps, and build the ITGC framework your program needs to hold up under audit scrutiny.</p>
+                <div class="text-left mt-6">
+                    <p class="text-slate-600 mb-6 leading-relaxed">I serve as an embedded, ongoing owner of your IT SOX program — setting direction, coordinating across teams, and keeping the program running effectively year-round. Most companies don't need a full-time IT SOX Director. What they need is someone who can step in quickly, own the program, and operate like part of the team, without the overhead of a full-time hire.</p>
                     <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Strategic Scoping:</strong> Identifying critical systems to prevent scope creep and ensuring your team stays focused on the risks that add actual value to the audit.</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Control Design:</strong> Building practical processes for Logical Access, Change Management, and IT Operations.</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Technical Documentation:</strong> Drafting the narratives, scoping documents, and risk-control matrices (RCMs) that give auditors a clear picture of your control environment.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Flat Monthly Retainer:</strong> No hourly billing, no scope creep, no surprises at the end of the month.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Strategy & Direction:</strong> I set the program direction and own the decisions, not just the execution.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Audit Bridge:</strong> I know how auditors think. I manage the relationship, vet requests, and make sure your controls are fairly represented.</span></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:border-blue-600 transition cursor-pointer h-full flex flex-col" onclick="toggleDrawer(this)">
-                <div class="flex justify-between items-center gap-4">
-                    <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left tracking-tight">Remediation & Controls Optimization</h4>
-                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
+            <div class="bg-white border border-slate-200 shadow-sm flex flex-col h-full" style="border-top: 3px solid #CBD5E1; border-radius: 0 0 1rem 1rem; padding: 2rem 1.5rem;">
+                <div class="flex items-start gap-4">
+                    <div>
+                        <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left tracking-tight">Targeted Engagements</h4>
+                        <p class="text-sm text-slate-400 italic mt-2">Readiness assessments, gap analysis, remediation, system implementations &amp; migrations</p>
+                    </div>
                 </div>
-                <div class="drawer-content text-left">
-                    <p class="text-slate-600 mb-6 leading-relaxed">I work directly with control owners to remediate IT audit findings and deficiencies. I don't just identify gaps, I partner with your team to build out the templates and processes needed to fix issues long-term.</p>
+                <div class="text-left mt-6">
+                    <p class="text-slate-600 mb-6 leading-relaxed">Not every situation calls for ongoing support. Sometimes you need focused help with a specific problem: a gap assessment before your first audit, remediating findings, or navigating a system change that puts controls at risk.</p>
                     <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Gap Analysis:</strong> Identifying the root cause of audit findings or deficiencies.</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Hands-on Execution:</strong> Developing practical templates and working side-by-side with owners through every step of the process.</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Validation Testing:</strong> Re-testing remediated controls to ensure they are operating effectively before year-end.</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:border-blue-600 transition cursor-pointer h-full flex flex-col" onclick="toggleDrawer(this)">
-                <div class="flex justify-between items-center gap-4">
-                    <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left">IT SOX Program Ownership</h4>
-                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
-                </div>
-                <div class="drawer-content text-left">
-                    <p class="text-slate-600 mb-6 leading-relaxed">For companies that need more than project-based help, I serve as an embedded, ongoing owner of the IT SOX program. I set the direction, bring strategy, and coordinate across teams to keep the program running effectively year-round.</p>
-                    <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
-                           </ul>
-                </div>
-            </div>
-
-            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:border-blue-600 transition cursor-pointer h-full flex flex-col" onclick="toggleDrawer(this)">
-                <div class="flex justify-between items-center gap-4">
-                    <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left">Audit Support & Coordination</h4>
-                    <span class="plus-icon text-3xl text-slate-300 flex-shrink-0">+</span>
-                </div>
-                <div class="drawer-content text-left">
-                    <p class="text-slate-600 mb-6 leading-relaxed">I act as the primary point of contact between your IT team and the auditors. I know how auditors think, what they're looking for, and how to keep the process moving efficiently.</p>
-                    <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-100 pt-6">
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Request Management:</strong> Vetting and streamlining auditor request lists to ensure requests are reasonable and clear.</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Audit Bridge:</strong> I make sure your controls are clearly understood and fairly represented.</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Protecting Your Team's Time:</strong> Keeping the process focused on what matters so your team isn't buried in unnecessary requests and meetings.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>SOX Readiness &amp; Gap Assessments:</strong> Evaluating your current control environment and identifying what needs to be in place before auditors arrive.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>Remediation:</strong> Working side-by-side with control owners to fix findings and build processes that hold up the next time around.</span></li>
+                        <li class="flex items-start gap-2 italic"><span>• <strong>System Implementations &amp; Migrations:</strong> Making sure new or changing systems don't introduce control gaps or disrupt what's already working.</span></li>
                     </ul>
                 </div>
             </div>
@@ -206,33 +180,7 @@
         </div>
     </section>
 
-    <section id="how-i-work" class="py-24 px-8 max-w-6xl mx-auto border-t border-slate-100">
-        <div class="max-w-4xl">
-            <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4 text-left">Fractional Support</h3>
-            <h2 class="text-4xl font-black mb-6 text-slate-900 text-left">An extension of your team</h2>
-            <div class="text-lg text-slate-600 leading-relaxed space-y-6 text-left">
-                <p>Most companies don't need a full-time IT SOX Director. What they need is someone who can step in quickly, own the program, and operate like part of the team, without the overhead of a full-time hire. Here's what that looks like:</p>
-              
- 	<ul class="space-y-2">
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-600 font-bold">•</span>
-                        <span><strong>Flat Monthly Retainer:</strong> No hourly billing, no scope creep, no surprises at the end of the month.</span>
-                    </li>
-			 <li class="flex items-start gap-3">
-                        <span class="text-blue-600 font-bold">•</span>
-                        <span><strong>Flexible by design:</strong> Some clients need ongoing weekly support. Others need focused help for readiness or remediation efforts.</span>
-                    </li>
-
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-600 font-bold">•</span>
-                        <span><strong>No overhead:</strong> A senior IT SOX Director can easily cost $180k+ before benefits, payroll taxes, and everything else. You get senior IT SOX expertise without the full-time cost.</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-24 px-8 max-w-6xl mx-auto border-t border-slate-100">
+        <section id="about" class="py-24 px-8 max-w-6xl mx-auto border-t border-slate-100">
         <div class="flex flex-col md:flex-row items-start gap-12">
             <div class="flex-1 order-2 md:order-1 text-left">
                 <h2 class="text-4xl font-black mb-6 text-slate-900">About me</h2>
@@ -280,7 +228,7 @@
     </div>
 </section>
 
-    <footer class="py-24 bg-slate-900 text-white text-center px-8">
+    <footer id="contact" class="py-24 bg-slate-900 text-white text-center px-8">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-4 italic text-slate-400">Let's talk about your IT SOX program</h2>
             <p class="text-lg text-slate-400 mb-12">Schedule a 30-minute intro call; no prep needed.</p>
