@@ -14,251 +14,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mekas Consulting | Independent IT SOX Advisor</title>
     <meta name="description" content="Independent IT SOX advisor offering fractional, embedded program ownership for public companies and IPO-stage businesses. Senior expertise, no full-time hire required.">
-    
+
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        // Site colors. Change a hex here and it updates everywhere.
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink:    '#1B2A41', // headings, dark sections
+                        body:   '#3F4A5C', // paragraph text
+                        subtle: '#5B6472', // small labels, footer
+                        teal:   '#0F766E', // accent (wordmark, buttons, labels)
+                        tealdk: '#0B5A54', // accent hover
+                        sand:   '#F4F3EF', // page background
+                        line:   '#D9D6CC', // dividers
+                    },
+                    fontFamily: { sans: ['Poppins', 'system-ui', 'sans-serif'] },
+                },
+            },
+        };
+    </script>
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .manifesto-border { border-left: 8px solid #ffffff; }
-        
-        /* Drawer Logic */
-        .drawer-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.3s ease; opacity: 0; }
-        .drawer-open .drawer-content { max-height: 1000px; opacity: 1; margin-top: 1.5rem; }
-        .plus-icon { transition: transform 0.4s ease; }
-        .drawer-open .plus-icon { transform: rotate(45deg); color: #2563eb; }
-
-        /* Prevents the horizontal "slide" globally */
-        html, body {
-            overflow-x: hidden;
-            width: 100%;
-            position: relative;
-        }
+        html { scroll-behavior: smooth; }
+        html, body { overflow-x: hidden; }
     </style>
 </head>
-<body class="bg-white text-slate-900 antialiased" x-data="{ mobileMenuOpen: false }">
+<body class="bg-sand text-ink font-sans antialiased">
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
-            
-            <a href="#" class="flex items-center hover:opacity-80 transition-opacity">
-                <div class="flex items-baseline">
-                    <span class="text-xl md:text-2xl font-black text-slate-900 uppercase" style="letter-spacing: -0.05em;">
-                        Mekas
-                    </span>
-                    <span class="ml-1 text-xl md:text-2xl font-black text-blue-600 uppercase" style="letter-spacing: -0.05em;">
-                        Consulting
-                    </span>
-                </div>
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 bg-sand/90 backdrop-blur-md border-b border-line">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between gap-4">
+            <a href="#top" class="text-[26px] md:text-[30px] leading-none text-ink hover:opacity-80 transition-opacity" style="letter-spacing: -0.04em;" aria-label="Mekas Consulting home">
+                <span class="font-bold">mekas</span><span class="font-light">consulting</span>
             </a>
-
-            <div class="flex items-center gap-8">
-                <div class="hidden md:flex items-center gap-8 text-xs font-black uppercase tracking-widest text-slate-500">
-                <a href="#services" class="hover:text-blue-600 transition">Services</a>
-                <a href="#about" class="hover:text-blue-600 transition">About Me</a>
-                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-            </div>
-                <a href="https://calendly.com/michael-mekasconsulting/30min" target="_blank" class="hidden sm:inline-block bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">
-                    Schedule Fit Call
+            <nav aria-label="Main" class="flex items-center gap-6 text-[15px] font-medium">
+                <a href="#services" class="hidden md:inline text-ink hover:text-teal transition">Services</a>
+                <a href="#about" class="hidden md:inline text-ink hover:text-teal transition">About</a>
+                <a href="https://calendly.com/michael-mekasconsulting/30min" target="_blank" rel="noopener" class="inline-flex items-center min-h-[44px] bg-ink text-white px-4 md:px-5 rounded-lg text-sm md:text-[15px] font-semibold hover:bg-teal transition">
+                    Book a call
                 </a>
-
-                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 text-slate-600 hover:text-blue-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
+            </nav>
         </div>
+    </header>
 
-        <div x-show="mobileMenuOpen" 
-             x-transition:enter="transition ease-out duration-200"
-             x-transition:enter-start="opacity-0 -translate-y-4"
-             x-transition:enter-end="opacity-100 translate-y-0"
-             class="md:hidden bg-white border-b border-slate-200 px-8 py-6 space-y-4 shadow-xl">
-            <a @click="mobileMenuOpen = false" href="#services" class="block text-sm font-black uppercase tracking-widest text-slate-600 hover:text-blue-600">Services</a>
-            <a @click="mobileMenuOpen = false" href="#about" class="block text-sm font-black uppercase tracking-widest text-slate-600 hover:text-blue-600">About Me</a>
-            <a @click="mobileMenuOpen = false" href="#contact" class="block text-sm font-black uppercase tracking-widest text-slate-600 hover:text-blue-600">Contact</a>
-            <a href="https://calendly.com/michael-mekasconsulting/30min" target="_blank" class="block sm:hidden bg-blue-600 text-white text-center px-5 py-3 rounded-xl text-sm font-bold">Schedule Fit Call</a>
-        </div>
-    </nav>
-
-    <section class="pt-32 md:pt-40 pb-24 px-8 max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12 text-center md:text-left">
-        <div class="w-48 h-48 md:w-60 md:h-60 flex-shrink-0 mx-auto md:md-0">
-            <img src="headshot.jpg" alt="Michael Mekas" class="w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-white">
-        </div>
-        <div class="flex-1">
-            <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-2">Michael Mekas</h1>
-            <h2 class="text-xl md:text-2xl font-bold text-blue-600 mb-6 uppercase tracking-wide">IT Controls & SOX Advisor</h2>
-            <div class="text-lg text-slate-600 max-w-2xl leading-relaxed text-left">
-                <p class="mb-4">I've spent over 12 years in IT SOX, from leading external audits at Deloitte to hands-on advisory work helping companies build and manage their own programs.</p>
-                <p>I've seen most IT SOX programs struggle for the same reason: no one truly owns them. Responsibility gets split across IT and finance, and the goal becomes satisfying auditors instead of building a program that works. I built Mekas Consulting to fix that.</p>
-            </div>
+    <!-- HERO: the problem first -->
+    <section id="top" class="max-w-6xl mx-auto px-5 md:px-8 py-14 min-h-[calc(100svh-77px)] flex flex-col justify-center">
+        <h1 class="text-[40px] leading-[1.05] md:text-7xl md:leading-[1.02] font-bold max-w-[14ch] mb-6" style="letter-spacing: -0.04em;">
+            Your IT SOX program needs an owner.
+        </h1>
+        <p class="text-lg md:text-[22px] leading-relaxed text-body max-w-[40ch] mb-8">
+            I'm Michael Mekas. 12+ years in IT SOX, including leading external audits at Deloitte. Whether you're building a program or fixing one that's drifted, I step in as its owner.
+        </p>
+        <div class="flex flex-wrap items-center gap-4">
+            <a href="https://calendly.com/michael-mekasconsulting/30min" target="_blank" rel="noopener" class="inline-flex items-center min-h-[44px] bg-teal text-white px-7 py-4 rounded-[10px] text-[17px] font-semibold hover:bg-tealdk transition">
+                Book a 30-minute call
+            </a>
+            <a href="#services" class="inline-flex items-center min-h-[44px] px-2 text-[17px] font-semibold text-ink hover:text-teal transition">
+                See how I help
+            </a>
         </div>
     </section>
 
-    <section class="bg-slate-900 py-28 px-8 text-white">
-        <div class="max-w-4xl mx-auto space-y-14">
-            <div class="manifesto-border pl-8 border-white">
-                <h3 class="text-xl md:text-4xl font-black mb-4 uppercase tracking-tight text-left">One Advisor. Direct Access.</h3>
-                <p class="text-lg md:text-lg text-slate-400 leading-relaxed font-light italic text-left">No account managers, no layers of communication. You work with me directly from day one.</p>
-            </div>
-            <div class="manifesto-border pl-8 border-white">
-                <h3 class="text-xl md:text-4xl font-black mb-4 uppercase tracking-tight text-left">Less Noise. More Time.</h3>
-                <p class="text-lg md:text-lg text-slate-400 leading-relaxed font-light italic text-left">Not every finding needs the same level of attention, and not every control needs a redesign. I focus on what's actually worth fixing so you can get back to running your business.</p>
-            </div>
-        </div>
-    </section>
+    <!-- SERVICES -->
+    <section id="services" class="max-w-6xl mx-auto px-5 md:px-8 pt-16 md:pt-24 pb-16 md:pb-28 scroll-mt-4">
+        <h2 class="text-3xl md:text-[44px] leading-tight font-bold mb-4" style="letter-spacing: -0.03em;">Where I come in</h2>
+        <p class="text-lg text-body leading-relaxed max-w-[56ch] mb-10">Most people come to me at one of two points.</p>
 
-    <section id="approach" class="pt-16 pb-4 px-8 max-w-4xl mx-auto scroll-mt-20">
-        <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4 text-left">My Approach</h3>
-        <div class="text-left space-y-7">
-            <p class="text-lg text-slate-600 leading-loose">When nobody internally truly owns your IT controls, things can get messy fast. I've seen this play out over and over. Controls pile up because an auditor once asked for them, no one understands why certain processes are in place, and before long the entire program becomes bloated and difficult to manage. Controls that should take 10 minutes end up eating your team's whole afternoon.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-            <blockquote class="my-8 pl-6 border-l-4 border-blue-600">
-                <p class="text-xl md:text-2xl font-semibold italic text-slate-900 leading-snug">My goal is to help companies build control programs that actually work, without making them more complicated than they need to be. I kept seeing the same thing over and over: companies spending more time than they should on IT controls, and still not ending up with an effective program.</p>
-            </blockquote>
-
-       <p class="text-lg text-slate-600 leading-loose">Having spent years both auditing IT controls and helping companies build them, I know what auditors actually need, and just as importantly, what they don't. When something comes up, I help teams fix the actual problem instead of adding more process to cover it.</p>
-
-            <p class="text-lg text-slate-600 leading-loose"> Designing a good control isn't really the hard part. Getting people to actually follow it, quarter after quarter, year after year - that's the hard part. One of my favorite parts of this work is partnering with the people who actually own and operate these processes. Not just delivering recommendations, but sitting down with your team to figure out what works, and building something they can understand and maintain.</p>
-
-            <p class="text-lg text-slate-600 leading-loose">A lot of my job is helping clients separate what truly matters from what does not. I want clients spending less time worrying about IT controls and more time running their business.</p>
-        </div>
-    </section>
-
-    <section id="services" class="pt-16 pb-4 px-8 max-w-7xl mx-auto scroll-mt-20">
-        <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4 text-left">Services</h3>
-        <h2 class="text-4xl font-black mb-6 text-slate-900 text-left">How I Can Help</h2>
-        <div class="mb-6 text-left">
-          <p class="text-lg text-slate-600 leading-relaxed mb-6">Most people come to me at one of two points: eiter you're either building a controls program from scratch (usually after raising a round or preparing for an IPO), or you've got one already, but it's reactive, nobody really owns it, and every audit feels like starting over.</p>
- <p class="text-lg text-slate-600 leading-relaxed mb-6">Wherever you're starting from, here's how we can work together:</p>
-          <ul class="space-y-6 text-lg text-slate-600 leading-relaxed">        </div>
- <div class="text-lg text-slate-600 leading-relaxed space-y-6 text-left">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-6">
-
-            <!-- Card 1: IT SOX Readiness Assessment -->
-            <div class="bg-white border border-slate-200 shadow-sm flex flex-col h-full" style="border-top: 3px solid #2563eb; border-radius: 0 0 1rem 1rem; padding: 2rem 1.5rem;">
-                <div class="flex items-start gap-4">
-                    <div>
-                        <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left tracking-tight">IT SOX Readiness Assessment</h4>
-                    </div>
-                </div>
-                <div class="text-left mt-6 flex flex-col flex-grow">
-                    <p class="text-slate-600 mb-6 leading-relaxed md:min-h-[120px]">I'll assess your control environment, tell you what's missing, and give you a clear, prioritized view of what actually matters. You'll walk away with:</p>
-                    <ul class="space-y-3 text-sm text-slate-700 font-medium mb-6">
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Where you stand today:</strong> A real picture of your control environment</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Everything in one place:</strong> Gaps and improvement opportunities captured in one place</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>A path forward:</strong> What to fix first, what's a quick win, and what can wait</span></li>
-                    </ul>
-                    <p class="text-sm font-bold text-slate-900 mt-auto pt-6 border-t border-slate-100">One-time flat fee, tailored to your environment</p>
-                </div>
+            <!-- Card 1: IT SOX Readiness -->
+            <div class="bg-white rounded-2xl p-7 md:p-8 flex flex-col">
+                <p class="text-[13px] font-semibold uppercase tracking-[0.08em] text-teal mb-3">IT SOX Readiness</p>
+                <h3 class="text-2xl font-bold leading-snug mb-3">Getting ready for SOX?</h3>
+                <p class="text-base md:text-[17px] text-body leading-relaxed mb-6">You've raised a round or you're preparing for an IPO. Plenty of people can tell you what's missing. I help you actually put it in place.</p>
+                <ul class="space-y-3 text-[15px] text-body leading-relaxed">
+                    <li><strong class="text-ink font-semibold">Where you stand today:</strong> A clear picture of what's in scope and what's missing</li>
+                    <li><strong class="text-ink font-semibold">A path forward:</strong> What to fix first, what's a quick win, and what can wait</li>
+                    <li><strong class="text-ink font-semibold">Hands-on build:</strong> I work with your control owners to design processes that fit how your team works, so they can run them on their own quarter after quarter</li>
+                </ul>
             </div>
 
             <!-- Card 2: IT SOX Program Ownership -->
-            <div class="bg-white border border-slate-200 shadow-sm flex flex-col h-full" style="border-top: 3px solid #2563eb; border-radius: 0 0 1rem 1rem; padding: 2rem 1.5rem;">
-                <div class="flex items-start gap-4">
-                    <div>
-                        <h4 class="text-2xl font-bold text-slate-900 leading-tight text-left tracking-tight">IT SOX Program Ownership</h4>
-                    </div>
-                </div>
-                <div class="text-left mt-6 flex flex-col flex-grow">
-                    <p class="text-slate-600 mb-6 leading-relaxed md:min-h-[120px]">Most companies don't need a full-time IT SOX Director. I step in as your program owner, setting direction and keeping things moving all year, without the cost of a full-time hire. Here's what that looks like:</p>
-                    <ul class="space-y-3 text-sm text-slate-700 font-medium mb-6">
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Clear direction and leadership:</strong> A dedicated owner making judgment calls and setting priorities.</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>Hands-on partner:</strong> I work directly with your control and system owners, whether that's remediating findings or building new controls.</span></li>
-                        <li class="flex items-start gap-2 italic"><span>• <strong>A managed audit relationship:</strong> Requests get vetted and handled so your team isn't scrambling every cycle.</span></li>
-                    </ul>
-                    <p class="text-sm font-bold text-slate-900 mt-auto pt-6 border-t border-slate-100">Flat monthly retainer, scoped to your needs.</p>
-                </div>
+            <div class="bg-white rounded-2xl p-7 md:p-8 flex flex-col">
+                <p class="text-[13px] font-semibold uppercase tracking-[0.08em] text-teal mb-3">IT SOX Program Ownership</p>
+                <h3 class="text-2xl font-bold leading-snug mb-3">Have a program, but no one really owns it?</h3>
+                <p class="text-base md:text-[17px] text-body leading-relaxed mb-6">This happens at mature companies too. Someone's in charge on paper and can tell something's off, but IT controls aren't their specialty. I step in as your program owner, setting direction and keeping things moving all year, without the cost of a full-time hire.</p>
+                <ul class="space-y-3 text-[15px] text-body leading-relaxed">
+                    <li><strong class="text-ink font-semibold">Clear direction and leadership:</strong> A dedicated owner making judgment calls and setting priorities</li>
+                    <li><strong class="text-ink font-semibold">Hands-on partner:</strong> I work directly with your control and system owners, whether that's remediating findings or building new controls</li>
+                    <li><strong class="text-ink font-semibold">A managed audit relationship:</strong> Requests get vetted and handled so your team isn't scrambling every cycle</li>
+                </ul>
             </div>
 
+        </div>
 
+        <!-- Flexibility note (replaces the pricing lines that were on each card) -->
+        <div class="mt-5 border border-line rounded-2xl px-7 md:px-8 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+            <p class="text-base md:text-[17px] text-body leading-relaxed max-w-[62ch]">
+                <strong class="text-ink font-semibold">Flexible scope.</strong> Some clients need a few hours a week of guidance and direction. Others need a full program owner.
+            </p>
+            <a href="https://calendly.com/michael-mekasconsulting/30min" target="_blank" rel="noopener" class="inline-flex items-center justify-center min-h-[44px] flex-shrink-0 bg-teal text-white px-6 rounded-[10px] text-[15px] font-semibold hover:bg-tealdk transition">
+                Book a call
+            </a>
         </div>
     </section>
 
-        <section id="about" class="py-24 px-8 max-w-6xl mx-auto border-t border-slate-100">
-        <div class="flex flex-col md:flex-row items-start gap-12">
-            <div class="flex-1 order-2 md:order-1 text-left">
-                <h3 class="text-sm font-black tracking-widest text-blue-600 uppercase mb-4 text-left">About</h3>
-                <h2 class="text-4xl font-black mb-6 text-slate-900">About me</h2>
-                <div class="text-lg text-slate-600 space-y-6 leading-relaxed">
+    <!-- WHY ME / TESTIMONIAL SLOT: when a testimonial comes in, replace the <p> text and uncomment the credit line -->
+    <section aria-label="Why me" class="bg-white">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-24 text-center">
+            <p class="mx-auto max-w-[38ch] text-[22px] md:text-[30px] font-medium leading-snug text-ink" style="letter-spacing: -0.015em;">
+                I've spent years on both sides: auditing IT controls and building them, so I know what auditors actually need. But writing a control isn't the hard part. Designing one that fits how your team actually works, so they can run it quarter after quarter, is.
+            </p>
+            <!-- <p class="mt-6 text-[15px] font-medium text-subtle">Lily M., [Title]</p> -->
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-28 scroll-mt-24">
+        <div class="flex flex-col md:flex-row items-center gap-10 md:gap-14">
+            <div class="w-full md:w-[400px] flex-shrink-0">
+                <img src="fam.jpg" alt="Michael Mekas with his family" class="w-full h-auto rounded-2xl">
+            </div>
+            <div class="flex-1">
+                <h2 class="text-3xl md:text-[44px] leading-tight font-bold mb-5" style="letter-spacing: -0.03em;">About me</h2>
+                <div class="text-lg text-body leading-relaxed space-y-4 max-w-[56ch]">
                     <p>I founded Mekas Consulting to work more directly with the people and teams I can genuinely help, without the layers and red tape of a big firm.</p>
                     <p>I live around Atlanta with my wife and our three kids. Outside of work, I enjoy playing tennis, coaching baseball, being outdoors, and generally trying to keep up with our little ones.</p>
                 </div>
             </div>
-            <div class="w-full md:w-96 order-1 md:order-2 flex-shrink-0 md:mt-9">
-                <img src="fam.jpg" alt="The Mekas Family" class="w-full h-auto rounded-2xl shadow-xl border-8 border-slate-50">
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL FOUNDATION -->
+    <section class="max-w-6xl mx-auto px-5 md:px-8 pb-16 md:pb-28">
+        <div class="bg-white rounded-2xl p-8 md:p-10">
+            <p class="text-[13px] font-semibold uppercase tracking-[0.08em] text-teal mb-8">Professional foundation</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
+                <div class="md:pr-10">
+                    <p class="text-xs font-semibold uppercase tracking-[0.12em] text-subtle mb-2">Certification</p>
+                    <p class="text-xl font-semibold leading-snug">Certified Information Systems Auditor (CISA)</p>
+                </div>
+                <div class="md:pl-10 md:border-l md:border-line">
+                    <p class="text-xs font-semibold uppercase tracking-[0.12em] text-subtle mb-2">Education</p>
+                    <p class="text-xl font-semibold leading-snug">Master of Science in Information Systems</p>
+                    <p class="text-body mt-1">Georgia State University</p>
+                </div>
             </div>
         </div>
     </section>
 
- <section class="pb-24 px-8 max-w-6xl mx-auto">
-    <div class="bg-slate-50 rounded-2xl p-8 md:p-10 border border-slate-200 shadow-sm">
-        <h3 class="text-xs font-black uppercase tracking-[0.3em] text-blue-600 mb-8 text-center">
-            Professional Foundation
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0 max-w-4xl mx-auto">
-            
-            <div class="md:px-12 space-y-4 text-center md:text-left">
-                <h4 class="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                    Certification
-                </h4>
-                <p class="text-xl font-bold text-slate-900 leading-tight">
-                    Certified Information Systems Auditor (CISA)
-                </p>
+    <!-- CONTACT -->
+    <section id="contact" class="bg-ink text-white scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-28 flex flex-col md:flex-row md:items-center md:justify-between gap-10">
+            <div class="md:max-w-[560px]">
+                <h2 class="text-[32px] md:text-[52px] leading-[1.08] font-bold mb-4" style="letter-spacing: -0.035em;">Have a question about your IT controls?</h2>
+                <p class="text-lg text-[#C9D1DC] leading-relaxed">Schedule a 30-minute intro call. No prep needed.</p>
             </div>
-
-            <div class="md:px-12 space-y-4 text-center md:text-left md:border-l md:border-slate-200">
-                <h4 class="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                    Education
-                </h4>
-                <p class="text-xl font-bold text-slate-900 leading-tight">
-                    Master of Science in Information Systems
-                </p>
-                <p class="text-slate-500 font-medium italic">
-                    Georgia State University
-                </p>
+            <div class="flex flex-col items-start gap-5">
+                <a href="https://calendly.com/michael-mekasconsulting/30min" target="_blank" rel="noopener" class="inline-flex items-center min-h-[44px] bg-white text-ink px-7 py-4 rounded-[10px] text-[17px] font-semibold hover:bg-sand transition">
+                    Book a call
+                </a>
+                <a href="mailto:michael@mekasconsulting.com" class="text-[17px] font-medium text-[#C9D1DC] hover:text-white underline underline-offset-4 decoration-teal transition">
+                    michael@mekasconsulting.com
+                </a>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
-    <footer id="contact" class="py-24 bg-slate-900 text-white text-center px-8">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-4 italic text-slate-400">Have a question about your IT controls? Let's talk.</h2>
-            <p class="text-lg text-slate-400 mb-12">Schedule a 30-minute intro call; no prep needed.</p>
-            
-            <div class="flex flex-col gap-10 justify-center items-center mb-16">
-                <a href="https://calendly.com/michael-mekasconsulting/30min" target="_blank" class="w-full sm:w-auto bg-blue-600 text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-blue-700 transition shadow-xl shadow-blue-900/20">
-                    Schedule Fit Call
-                </a>
-                
-                <a href="mailto:michael@mekasconsulting.com" class="text-xl md:text-2xl font-black text-white hover:text-blue-400 transition border-b-2 border-blue-600 hover:border-blue-400 pb-2">
-                   michael@mekasconsulting.com
-                </a>
-            </div>
-
-            <div class="flex justify-center border-t border-slate-800 pt-12">
-                <a href="https://www.linkedin.com/in/michaelmekas/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-blue-500 transition-colors transform hover:scale-110">
-                    <span class="sr-only">LinkedIn</span>
-                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                </a>
-            </div>
-            <p class="mt-8 text-slate-500 text-sm tracking-[0.3em] uppercase">© 2026 Mekas Consulting LLC | Georgia</p>
+    <!-- FOOTER -->
+    <footer class="max-w-6xl mx-auto px-5 md:px-8 py-8 flex flex-wrap items-center justify-between gap-4 text-sm text-subtle">
+        <span class="text-lg text-ink" style="letter-spacing: -0.04em;"><span class="font-bold">mekas</span><span class="font-light">consulting</span></span>
+        <div class="flex items-center gap-5">
+            <span>© 2026 Mekas Consulting LLC · Atlanta, GA</span>
+            <a href="https://www.linkedin.com/in/michaelmekas/" target="_blank" rel="noopener noreferrer" class="text-subtle hover:text-teal transition" aria-label="LinkedIn">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+            </a>
         </div>
     </footer>
 
-    <script>
-        function toggleDrawer(element) {
-            element.classList.toggle('drawer-open');
-        }
-    </script>
 </body>
 </html>
